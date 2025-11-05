@@ -11,10 +11,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "SALSA BACHATA DANCE LESSONS - Salsa & Bachata Classes",
+  title: "Carlos Yepes - Salsa & Bachata Dance Classes",
   description:
-    "Professional salsa and bachata dance classes for small groups (5-20 people)",
-  generator: "v0.app",
+    "Professional salsa and bachata dance classes for small groups (5-20 people). Learn with passion and personalized attention.",
+  generator: "jorgecalleja.dev",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
