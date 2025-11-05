@@ -1,39 +1,40 @@
-"use client"
+"use client";
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, type ReactNode } from "react";
 
-type Language = "en" | "de" | "fr" | "es"
+type Language = "en" | "de" | "fr" | "es";
 
 interface Translations {
   hero: {
-    title: string
-    subtitle: string
-    cta: string
-  }
+    title: string;
+    subtitle: string;
+    cta: string;
+  };
   slider: {
-    title: string
-  }
+    title: string;
+  };
   pricing: {
-    title: string
-    subtitle: string
-    individual: string
-    group: string
-    perPerson: string
-    perSession: string
-    features: string[]
-    cta: string
-  }
+    title: string;
+    subtitle: string;
+    individual: string;
+    group: string;
+    perPerson: string;
+    perSession: string;
+    features: string[];
+    cta: string;
+  };
   footer: {
-    contact: string
-    rights: string
-  }
+    contact: string;
+    rights: string;
+  };
 }
 
 const translations: Record<Language, Translations> = {
   en: {
     hero: {
-      title: "HOT LATIN DANCE",
-      subtitle: "Learn Salsa & Bachata with passion! Small groups (5-20 people) for personalized attention",
+      title: "SALSA BACHATA DANCE LESSONS",
+      subtitle:
+        "Learn Salsa & Bachata with passion! Small groups (5-20 people) for personalized attention",
       cta: "Book Your Class",
     },
     slider: {
@@ -62,8 +63,9 @@ const translations: Record<Language, Translations> = {
   },
   de: {
     hero: {
-      title: "HOT LATIN DANCE",
-      subtitle: "Lerne Salsa & Bachata mit Leidenschaft! Kleine Gruppen (5-20 Personen) für persönliche Betreuung",
+      title: "SALSA BACHATA DANCE LESSONS",
+      subtitle:
+        "Lerne Salsa & Bachata mit Leidenschaft! Kleine Gruppen (5-20 Personen) für persönliche Betreuung",
       cta: "Kurs Buchen",
     },
     slider: {
@@ -92,7 +94,7 @@ const translations: Record<Language, Translations> = {
   },
   fr: {
     hero: {
-      title: "HOT LATIN DANCE",
+      title: "SALSA BACHATA DANCE LESSONS",
       subtitle:
         "Apprenez la Salsa & Bachata avec passion! Petits groupes (5-20 personnes) pour une attention personnalisée",
       cta: "Réserver Votre Cours",
@@ -123,8 +125,9 @@ const translations: Record<Language, Translations> = {
   },
   es: {
     hero: {
-      title: "HOT LATIN DANCE",
-      subtitle: "¡Aprende Salsa y Bachata con pasión! Grupos reducidos (5-20 personas) para atención personalizada",
+      title: "SALSA BACHATA DANCE LESSONS",
+      subtitle:
+        "¡Aprende Salsa y Bachata con pasión! Grupos reducidos (5-20 personas) para atención personalizada",
       cta: "Reserva Tu Clase",
     },
     slider: {
@@ -151,30 +154,34 @@ const translations: Record<Language, Translations> = {
       rights: "Todos los derechos reservados",
     },
   },
-}
+};
 
 interface LanguageContextType {
-  language: Language
-  setLanguage: (lang: Language) => void
-  t: Translations
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: Translations;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("es")
+  const [language, setLanguage] = useState<Language>("es");
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, t: translations[language] }}
+    >
       {children}
     </LanguageContext.Provider>
-  )
+  );
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext)
+  const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error("useLanguage must be used within LanguageProvider")
+    throw new Error("useLanguage must be used within LanguageProvider");
   }
-  return context
+  return context;
 }
