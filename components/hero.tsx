@@ -1,9 +1,17 @@
 "use client";
 
 import { useLanguage } from "./language-provider";
+import { Button } from "./ui/button";
 
 export function Hero() {
   const { t } = useLanguage();
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -19,16 +27,22 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-        {/* Giant Banana Logo */}
-        <div className="mb-8 animate-bounce-slow drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"></div>
-
-        <h1 className="mb-6 text-balance font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-5xl md:text-7xl lg:text-8xl">
+        <h1 className="mb-6 text-balance font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-4xl md:text-6xl lg:text-7xl">
           {t.hero.title}
         </h1>
 
         <p className="mb-10 max-w-2xl text-balance text-xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] md:text-2xl">
           {t.hero.subtitle}
         </p>
+
+        {/* CTA Button - Only visible on mobile */}
+        <Button
+          size="lg"
+          onClick={scrollToPricing}
+          className="md:hidden bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 font-bold shadow-[0_8px_24px_rgba(0,0,0,0.3)] transform transition hover:scale-105 hover:shadow-[0_12px_32px_rgba(0,0,0,0.4)]"
+        >
+          {t.hero.cta}
+        </Button>
       </div>
 
       {/* Scroll Indicator */}

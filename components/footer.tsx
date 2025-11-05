@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "./language-provider";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Music } from "lucide-react";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -10,44 +10,57 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground py-12 px-4">
       <div className="container mx-auto">
         <div className="grid gap-8 md:grid-cols-3">
-          {/* Logo & Banana */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 text-6xl">🍌</div>
-            <h3 className="text-2xl font-bold">SALSA BACHATA DANCE LESSONS</h3>
+          {/* Logo */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="mb-3 flex items-center gap-2">
+              <Music className="h-10 w-10 md:h-12 md:w-12" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">Carlos Yepes</h3>
+            <p className="text-base md:text-lg opacity-90 italic leading-relaxed max-w-xs">
+              ¿Conoces a Carlos Yepes? ¡Es un instructor de salsa y bachata
+              increíble! Únete a nuestras clases y descubre el ritmo que llevas
+              dentro.
+            </p>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="mb-4 text-xl font-semibold">{t.footer.contact}</h4>
+          <div className="text-center md:text-left">
+            <h4 className="mb-4 text-lg md:text-xl font-semibold">
+              {t.footer.contact}
+            </h4>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5" />
-                <span>info@hotlatindance.com</span>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Mail className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm md:text-base">
+                  info@hotlatindance.com
+                </span>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5" />
-                <span>+34 123 456 789</span>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm md:text-base">+34 123 456 789</span>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5" />
-                <span>Barcelona, Spain</span>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <MapPin className="h-5 w-5 flex-shrink-0" />
+                <span className="text-sm md:text-base">Barcelona, Spain</span>
               </div>
             </div>
           </div>
 
           {/* Social Links */}
-          <div>
-            <h4 className="mb-4 text-xl font-semibold">Social Media</h4>
-            <div className="flex gap-4">
+          <div className="text-center md:text-left">
+            <h4 className="mb-4 text-lg md:text-xl font-semibold">
+              Social Media
+            </h4>
+            <div className="flex gap-3 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/hotlatindance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
                 aria-label="Facebook"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -58,11 +71,11 @@ export function Footer() {
                 href="https://www.instagram.com/hotlatindance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
                 aria-label="Instagram"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -73,11 +86,11 @@ export function Footer() {
                 href="https://www.tiktok.com/@hotlatindance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
                 aria-label="TikTok"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -89,8 +102,8 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-sm">
-            © 2025 SALSA BACHATA DANCE LESSONS. {t.footer.rights}
+          <p className="text-xs md:text-sm opacity-80">
+            © 2025 Carlos Yepes - Clases de Salsa y Bachata. {t.footer.rights}
           </p>
         </div>
       </div>

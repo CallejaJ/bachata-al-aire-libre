@@ -32,7 +32,7 @@ interface Translations {
 const translations: Record<Language, Translations> = {
   en: {
     hero: {
-      title: "SALSA BACHATA DANCE LESSONS",
+      title: "SALSA BACHATA DANCE",
       subtitle:
         "Learn Salsa & Bachata with passion! Small groups (5-20 people) for personalized attention",
       cta: "Book Your Class",
@@ -63,7 +63,7 @@ const translations: Record<Language, Translations> = {
   },
   de: {
     hero: {
-      title: "SALSA BACHATA DANCE LESSONS",
+      title: "SALSA BACHATA TANZ",
       subtitle:
         "Lerne Salsa & Bachata mit Leidenschaft! Kleine Gruppen (5-20 Personen) für persönliche Betreuung",
       cta: "Kurs Buchen",
@@ -94,7 +94,7 @@ const translations: Record<Language, Translations> = {
   },
   fr: {
     hero: {
-      title: "SALSA BACHATA DANCE LESSONS",
+      title: "DANSE SALSA BACHATA",
       subtitle:
         "Apprenez la Salsa & Bachata avec passion! Petits groupes (5-20 personnes) pour une attention personnalisée",
       cta: "Réserver Votre Cours",
@@ -125,7 +125,7 @@ const translations: Record<Language, Translations> = {
   },
   es: {
     hero: {
-      title: "SALSA BACHATA DANCE LESSONS",
+      title: "BAILE DE SALSA Y BACHATA",
       subtitle:
         "¡Aprende Salsa y Bachata con pasión! Grupos reducidos (5-20 personas) para atención personalizada",
       cta: "Reserva Tu Clase",

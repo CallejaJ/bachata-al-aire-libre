@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useLanguage } from "./language-provider"
-import { Button } from "./ui/button"
+import { useLanguage } from "./language-provider";
+import { Button } from "./ui/button";
 
 export function LanguageSelector() {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-1 md:gap-2">
       <Button
         variant={language === "es" ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage("es")}
-        className="font-semibold"
+        className="font-semibold text-xs px-2 md:px-3 bg-white/10 hover:bg-white/20 border-white/30"
       >
         ES
       </Button>
@@ -20,7 +20,7 @@ export function LanguageSelector() {
         variant={language === "en" ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage("en")}
-        className="font-semibold"
+        className="font-semibold text-xs px-2 md:px-3 bg-white/10 hover:bg-white/20 border-white/30"
       >
         EN
       </Button>
@@ -28,7 +28,7 @@ export function LanguageSelector() {
         variant={language === "de" ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage("de")}
-        className="font-semibold"
+        className="font-semibold text-xs px-2 md:px-3 bg-white/10 hover:bg-white/20 border-white/30"
       >
         DE
       </Button>
@@ -36,10 +36,10 @@ export function LanguageSelector() {
         variant={language === "fr" ? "default" : "outline"}
         size="sm"
         onClick={() => setLanguage("fr")}
-        className="font-semibold"
+        className="font-semibold text-xs px-2 md:px-3 bg-white/10 hover:bg-white/20 border-white/30"
       >
         FR
       </Button>
     </div>
-  )
+  );
 }

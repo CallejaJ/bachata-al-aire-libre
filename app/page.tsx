@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/components/language-provider";
 export default function Home() {
   return (
     <LanguageProvider>
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-x-hidden w-full">
         <Header />
         <MusicPlayer />
         <Hero />
