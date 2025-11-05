@@ -13,28 +13,24 @@ export function MusicPlayer() {
     if (audioRef.current) {
       audioRef.current.volume = 0.3
     }
-    console.log("[v0] Music player mounted")
   }, [])
 
-  const togglePlay = () => {
-    console.log("[v0] Toggle play clicked, current state:", isPlaying)
+  const togglePlay = async () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause()
+        setIsPlaying(false)
       } else {
         setIsLoading(true)
-        audioRef.current
-          .play()
-          .then(() => {
-            console.log("[v0] Music started playing")
-            setIsLoading(false)
-          })
-          .catch((error) => {
-            console.log("[v0] Error playing music:", error)
-            setIsLoading(false)
-          })
+        try {
+          await audioRef.current.play()
+          setIsPlaying(true)
+        } catch (error) {
+          console.error("Error playing music:", error)
+        } finally {
+          setIsLoading(false)
+        }
       }
-      setIsPlaying(!isPlaying)
     }
   }
 
