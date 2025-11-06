@@ -7,7 +7,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary text-primary-foreground py-12 px-4">
+    <footer className="bg-primary text-primary-foreground py-8 px-4">
       <div className="container mx-auto">
         <div className="grid gap-8 md:grid-cols-3 md:items-start">
           {/* Logo */}
@@ -38,7 +38,7 @@ export function Footer() {
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm md:text-base">+34 123 456 789</span>
+                <span className="text-sm md:text-base">+34 698 50 16 76</span>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <MapPin className="h-5 w-5 flex-shrink-0" />

@@ -7,6 +7,7 @@ import { Pricing } from "@/components/pricing";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
 import { LanguageProvider } from "@/components/language-provider";
+import GMaps from "@/components/gmaps";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <HowItWorks />
         <Benefits />
         <Pricing />
+        <GMaps height={450} />
         <Footer />
       </main>
     </LanguageProvider>
