@@ -20,21 +20,70 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "system-ui, sans-serif",
           position: "relative",
         }}
       >
-        {/* Maracas grandes centradas */}
+        {/* Círculo blanco de fondo */}
         <div
           style={{
-            fontSize: "400px",
+            background: "white",
+            width: "450px",
+            height: "450px",
+            borderRadius: "50%",
             display: "flex",
-            transform: "rotate(-15deg)",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+            gap: "20px",
           }}
         >
-          🪇
+          {/* Maracas */}
+          <div
+            style={{
+              fontSize: "200px",
+              display: "flex",
+              transform: "rotate(-15deg)",
+            }}
+          >
+            🪇
+          </div>
+          
+          {/* Texto */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "42px",
+                fontWeight: "900",
+                color: "#0052A5",
+                textAlign: "center",
+                lineHeight: 1,
+              }}
+            >
+              BACHATA
+            </div>
+            <div
+              style={{
+                fontSize: "28px",
+                fontWeight: "600",
+                color: "#EF3340",
+                textAlign: "center",
+              }}
+            >
+              AL AIRE LIBRE
+            </div>
+          </div>
         </div>
       </div>
     ),
