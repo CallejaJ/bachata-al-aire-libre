@@ -25,9 +25,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  icons: {
-    icon: "/icon.png",
-  },
   openGraph: {
     title: "Bachata al Aire Libre - Clases de Salsa y Bachata | Carlos Yépez",
     description:
