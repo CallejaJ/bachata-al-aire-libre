@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/dance-photo-1.jpg",
+        url: "/hero.jpg",
         width: 1200,
         height: 630,
         alt: "Clases de bachata y salsa al aire libre en Málaga con Carlos Yépez",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Bachata al Aire Libre - Clases de Salsa y Bachata",
     description:
       "Aprende salsa y bachata con Carlos Yépez en Málaga. €10/hora + pareja gratis.",
-    images: ["/dance-photo-1.jpg"],
+    images: ["/hero.jpg"],
     creator: "@bachataalairelibre",
   },
   robots: {

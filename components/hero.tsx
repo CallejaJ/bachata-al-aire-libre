@@ -18,7 +18,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/dance-photo-1.jpg"
+          src="/hero.jpg"
           alt="Salsa dancing"
           className="h-full w-full object-cover"
         />
