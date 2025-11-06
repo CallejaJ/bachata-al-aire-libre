@@ -78,7 +78,7 @@ export function Pricing() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
               >
                 <a
-                  href="https://wa.me/34698501676?text=Hola%2C%20me%20interesa%20la%20clase%20individual%20de%20bachata"
+                  href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20la%20clase%20individual%20de%20bachata"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -139,7 +139,7 @@ export function Pricing() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
               >
                 <a
-                  href="https://wa.me/34698501676?text=Hola%2C%20me%20interesa%20la%20clase%20privada%20de%20bachata"
+                  href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20la%20clase%20privada%20de%20bachata"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
