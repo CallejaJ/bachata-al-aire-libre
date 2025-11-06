@@ -2,31 +2,26 @@
 
 import { useLanguage } from "./language-provider"
 import { Card } from "./ui/card"
-import { Users, BookOpen, Music2, Sparkles } from "lucide-react"
+import { BookOpen, Music2, Sparkles } from "lucide-react"
 
 export function HowItWorks() {
   const { t } = useLanguage()
 
   const steps = [
     {
-      icon: Users,
+      icon: BookOpen,
       title: t.howItWorks.step1.title,
       description: t.howItWorks.step1.description,
     },
     {
-      icon: BookOpen,
+      icon: Music2,
       title: t.howItWorks.step2.title,
       description: t.howItWorks.step2.description,
     },
     {
-      icon: Music2,
+      icon: Sparkles,
       title: t.howItWorks.step3.title,
       description: t.howItWorks.step3.description,
-    },
-    {
-      icon: Sparkles,
-      title: t.howItWorks.step4.title,
-      description: t.howItWorks.step4.description,
     },
   ]
 
@@ -42,7 +37,7 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <Card
               key={index}

@@ -28,10 +28,6 @@ interface Translations {
       title: string;
       description: string;
     };
-    step4: {
-      title: string;
-      description: string;
-    };
     cta: string;
   };
   benefits: {
@@ -92,21 +88,16 @@ const translations: Record<Language, Translations> = {
       subtitle:
         "A workshop-class designed for everyone to enjoy, regardless of your level",
       step1: {
-        title: "Welcome & Warm-up",
-        description:
-          "We start with a warm welcome and warm-up exercises to prepare your body.",
-      },
-      step2: {
         title: "Basic Steps",
         description:
-          "We teach the fundamentals of salsa and bachata, perfect for beginners just starting out.",
+          "We welcome you and teach the fundamentals of salsa and bachata, perfect for beginners just starting out.",
       },
-      step3: {
+      step2: {
         title: "New Choreography",
         description:
           "Each session includes a different choreography, ideal for those who already know how to dance and want to learn more.",
       },
-      step4: {
+      step3: {
         title: "Social Practice",
         description:
           "Time to practice freely, socialize and apply what you've learned in a relaxed atmosphere.",
@@ -140,10 +131,10 @@ const translations: Record<Language, Translations> = {
         "Join our community and discover all the benefits of outdoor dancing!",
     },
     pricing: {
-      title: "Pricing",
-      subtitle: "Choose the perfect option for you",
-      individual: "Individual",
-      private: "Private Class",
+      title: "Precios",
+      subtitle: "Elige la opción perfecta para ti",
+      individual: "Taller-Clase Grupal",
+      private: "Clase Privada",
       privateDesc: "Personalized session",
       perPerson: "per person",
       perSession: "",
@@ -185,21 +176,16 @@ const translations: Record<Language, Translations> = {
       title: "Wie funktioniert es?",
       subtitle: "Ein Workshop-Kurs für alle, unabhängig von deinem Niveau",
       step1: {
-        title: "Begrüßung & Aufwärmen",
-        description:
-          "Wir beginnen mit einer herzlichen Begrüßung und Aufwärmübungen, um deinen Körper vorzubereiten.",
-      },
-      step2: {
         title: "Grundschritte",
         description:
-          "Wir lehren die Grundlagen von Salsa und Bachata, perfekt für Anfänger, die gerade erst anfangen.",
+          "Wir begrüßen Sie und lehren die Grundlagen von Salsa und Bachata, perfekt für Anfänger, die gerade erst anfangen.",
       },
-      step3: {
+      step2: {
         title: "Neue Choreografie",
         description:
           "Jede Sitzung beinhaltet eine andere Choreografie, ideal für diejenigen, die bereits tanzen können und mehr lernen möchten.",
       },
-      step4: {
+      step3: {
         title: "Soziales Üben",
         description:
           "Zeit zum freien Üben, Sozialisieren und Anwenden des Gelernten in entspannter Atmosphäre.",
@@ -279,21 +265,16 @@ const translations: Record<Language, Translations> = {
       subtitle:
         "Un atelier-cours conçu pour que tout le monde en profite, quel que soit votre niveau",
       step1: {
-        title: "Accueil & Échauffement",
+        title: "Pas de Base",
         description:
-          "Nous commençons par un accueil chaleureux et des exercices d'échauffement pour préparer votre corps.",
+          "Nous vous accueillons et enseignons les fondamentaux de la salsa et de la bachata, parfait pour les débutants qui commencent.",
       },
       step2: {
-        title: "Pas de base",
-        description:
-          "Nous enseignons les fondamentaux de la salsa et de la bachata, parfait pour les débutants qui commencent.",
-      },
-      step3: {
         title: "Nouvelle Chorégraphie",
         description:
           "Chaque session inclut une chorégraphie différente, idéale pour ceux qui savent déjà danser et veulent en apprendre plus.",
       },
-      step4: {
+      step3: {
         title: "Pratique Sociale",
         description:
           "Temps pour pratiquer librement, socialiser et appliquer ce que vous avez appris dans une atmosphère détendue.",
@@ -373,21 +354,16 @@ const translations: Record<Language, Translations> = {
       subtitle:
         "Un taller-clase diseñado para que todos disfruten, sin importar tu nivel",
       step1: {
-        title: "Bienvenida y Calentamiento",
-        description:
-          "Comenzamos con una bienvenida cordial y ejercicios de calentamiento para preparar el cuerpo.",
-      },
-      step2: {
         title: "Pasos Básicos",
         description:
-          "Enseñamos los fundamentos de salsa y bachata, perfectos para principiantes que están comenzando.",
+          "Te damos la bienvenida y enseñamos los fundamentos de salsa y bachata, perfecto para principiantes que recién empiezan.",
       },
-      step3: {
+      step2: {
         title: "Coreografía Nueva",
         description:
           "Cada sesión incluye una coreografía diferente, ideal para quienes ya saben bailar y quieren aprender más.",
       },
-      step4: {
+      step3: {
         title: "Práctica Social",
         description:
           "Tiempo para practicar libremente, socializar y aplicar lo aprendido en un ambiente relajado.",
@@ -423,7 +399,7 @@ const translations: Record<Language, Translations> = {
     pricing: {
       title: "Tarifas",
       subtitle: "Elige la opción perfecta para ti",
-      individual: "Individual",
+      individual: "Taller-Clase Grupal",
       private: "Clase Privada",
       privateDesc: "Sesión personalizada",
       perPerson: "por persona",

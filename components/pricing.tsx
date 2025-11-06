@@ -28,7 +28,7 @@ export function Pricing() {
         </div>
 
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-          {/* Individual Pricing */}
+          {/* Group Class Pricing */}
           <Card className="border-2 border-secondary shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 relative overflow-hidden flex flex-col">
             {/* Video Background */}
             <video
@@ -78,7 +78,7 @@ export function Pricing() {
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
               >
                 <a
-                  href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20la%20clase%20individual%20de%20bachata"
+                  href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20el%20taller-clase%20grupal%20de%20bachata"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

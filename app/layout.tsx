@@ -112,8 +112,8 @@ export default function RootLayout({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Clase Individual",
-            description: "Clase de bachata/salsa individual con pareja gratis",
+            name: "Taller-Clase Grupal",
+            description: "Clase de bachata/salsa grupal con pareja gratis",
           },
           price: "10",
           priceCurrency: "EUR",
