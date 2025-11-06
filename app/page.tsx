@@ -4,6 +4,7 @@ import { PhotoSlider } from "@/components/photo-slider";
 import { HowItWorks } from "@/components/how-it-works";
 import { Benefits } from "@/components/benefits";
 import { Pricing } from "@/components/pricing";
+import { Testimonials } from "@/components/testimonials";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
 import { LanguageProvider } from "@/components/language-provider";
@@ -20,6 +21,7 @@ export default function Home() {
         <HowItWorks />
         <Benefits />
         <Pricing />
+        <Testimonials />
         <GMaps height={450} />
         <Footer />
       </main>
