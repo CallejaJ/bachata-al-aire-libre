@@ -13,10 +13,10 @@ export function Footer() {
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-lg md:text-xl font-bold mb-1">
-              Bachata al Aire Libre en Málaga
+              {t.footer.title}
             </h3>
             <p className="text-sm opacity-70 leading-tight max-w-xs">
-              Clases de salsa y bachata con Carlos Yépez
+              {t.footer.description}
             </p>
           </div>
 
