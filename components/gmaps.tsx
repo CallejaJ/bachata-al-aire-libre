@@ -17,11 +17,9 @@ const GMaps: React.FC<GMapsProps> = ({ className = "", height = 500 }) => {
           width="100%"
           height={height}
           allowFullScreen
-          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Ubicación Clases de Bachata - C/ Alcazabilla, 1, Málaga"
           className="w-full border-0 block"
-          style={{ display: "block" }}
         />
       </div>
     </section>

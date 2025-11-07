@@ -66,6 +66,14 @@ interface Translations {
     privateFeatures: string[];
     cta: string;
   };
+  faq: {
+    title: string;
+    subtitle: string;
+    questions: {
+      question: string;
+      answer: string;
+    }[];
+  };
   footer: {
     contact: string;
     rights: string;
@@ -157,6 +165,44 @@ const translations: Record<Language, Translations> = {
       ],
       cta: "Book Now",
     },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Everything you need to know about bachata and salsa classes in Málaga",
+      questions: [
+        {
+          question: "Where do bachata classes take place in Málaga?",
+          answer: "Our outdoor bachata and salsa classes are held in a unique location in the heart of Málaga, at C/ Alcazabilla, 1, right next to the Roman Theatre and the Alcazaba. An unbeatable atmosphere to learn Latin dance under the Málaga sky!"
+        },
+        {
+          question: "Do I need previous experience?",
+          answer: "Not at all! Our bachata and salsa classes in Málaga are designed for all levels. Whether you're a complete beginner or have some experience, instructor Carlos Yépez will adapt the teaching to your pace. The important thing is to come with a desire to learn and have fun!"
+        },
+        {
+          question: "What is the price of bachata classes in Málaga?",
+          answer: "The group workshop-class (5-20 people) costs €10 per session, and if you bring a partner, they get in free. Private classes cost €25 per hour. We offer the best value for learning bachata and salsa in Málaga."
+        },
+        {
+          question: "What days and times are the dance classes?",
+          answer: "Schedules vary depending on demand and the season. The best way to find out about available times is to contact us directly via WhatsApp at +34 698 50 16 76 or through our Instagram @bachataalairelibre."
+        },
+        {
+          question: "Do I need to bring a partner?",
+          answer: "No, it's not necessary! One of the advantages of our group classes is that we practice partner rotations so everyone can dance with different people. This helps you improve faster and makes the classes more social and fun."
+        },
+        {
+          question: "What makes outdoor bachata classes in Málaga special?",
+          answer: "Learning bachata and salsa outdoors in the center of Málaga, surrounded by monuments like the Roman Theatre and the Alcazaba, creates a magical and unique atmosphere you won't find in traditional dance academies. Plus, the fresh air and natural setting make classes more enjoyable and relaxed."
+        },
+        {
+          question: "Do you teach only bachata or other Latin rhythms too?",
+          answer: "We specialize in both bachata and salsa! In our classes in Málaga, you'll learn both styles, as they complement each other perfectly and allow you to dance at any Latin party or social event."
+        },
+        {
+          question: "How can I book my bachata class in Málaga?",
+          answer: "You can book via WhatsApp at +34 698 50 16 76, send us an email at bachataalairelibrelibre@gmail.com, or contact us through Instagram @bachataalairelibre. We'll respond quickly to confirm your spot!"
+        }
+      ]
+    },
     footer: {
       contact: "Contact us",
       rights: "All rights reserved",
@@ -244,6 +290,44 @@ const translations: Record<Language, Translations> = {
         "In deinem eigenen Tempo lernen",
       ],
       cta: "Jetzt Buchen",
+    },
+    faq: {
+      title: "Häufig gestellte Fragen",
+      subtitle: "Alles, was Sie über Bachata- und Salsa-Kurse in Málaga wissen müssen",
+      questions: [
+        {
+          question: "Wo finden die Bachata-Kurse in Málaga statt?",
+          answer: "Unsere Bachata- und Salsa-Kurse im Freien finden an einem einzigartigen Ort im Herzen von Málaga statt, in der C/ Alcazabilla, 1, direkt neben dem Römischen Theater und der Alcazaba. Eine unschlagbare Atmosphäre, um lateinamerikanischen Tanz unter dem Himmel von Málaga zu lernen!"
+        },
+        {
+          question: "Brauche ich Vorkenntnisse?",
+          answer: "Überhaupt nicht! Unsere Bachata- und Salsa-Kurse in Málaga sind für alle Niveaus konzipiert. Egal ob Sie Anfänger sind oder bereits Erfahrung haben, Lehrer Carlos Yépez passt den Unterricht an Ihr Tempo an. Wichtig ist, dass Sie mit Lust zum Lernen und Spaß haben kommen!"
+        },
+        {
+          question: "Was kosten die Bachata-Kurse in Málaga?",
+          answer: "Der Gruppen-Workshop-Kurs (5-20 Personen) kostet 10 € pro Sitzung, und wenn Sie einen Partner mitbringen, ist dieser kostenlos. Privatkurse kosten 25 € pro Stunde. Wir bieten das beste Preis-Leistungs-Verhältnis, um Bachata und Salsa in Málaga zu lernen."
+        },
+        {
+          question: "An welchen Tagen und zu welchen Zeiten finden die Tanzkurse statt?",
+          answer: "Die Zeiten variieren je nach Nachfrage und Jahreszeit. Der beste Weg, um die verfügbaren Zeiten zu erfahren, ist uns direkt über WhatsApp unter +34 698 50 16 76 oder über unser Instagram @bachataalairelibre zu kontaktieren."
+        },
+        {
+          question: "Muss ich einen Partner mitbringen?",
+          answer: "Nein, das ist nicht notwendig! Einer der Vorteile unserer Gruppenkurse ist, dass wir Partnerwechsel üben, damit jeder mit verschiedenen Personen tanzen kann. Dies hilft Ihnen, schneller Fortschritte zu machen und macht die Kurse sozialer und unterhaltsamer."
+        },
+        {
+          question: "Was macht die Bachata-Kurse im Freien in Málaga besonders?",
+          answer: "Bachata und Salsa im Freien im Zentrum von Málaga zu lernen, umgeben von Denkmälern wie dem Römischen Theater und der Alcazaba, schafft eine magische und einzigartige Atmosphäre, die Sie in traditionellen Tanzakademien nicht finden werden. Außerdem machen die frische Luft und die natürliche Umgebung die Kurse angenehmer und entspannter."
+        },
+        {
+          question: "Unterrichten Sie nur Bachata oder auch andere lateinamerikanische Rhythmen?",
+          answer: "Wir spezialisieren uns sowohl auf Bachata als auch auf Salsa! In unseren Kursen in Málaga lernen Sie beide Stile, da sie sich perfekt ergänzen und es Ihnen ermöglichen, auf jeder Latin-Party oder sozialen Veranstaltung zu tanzen."
+        },
+        {
+          question: "Wie kann ich meinen Bachata-Kurs in Málaga buchen?",
+          answer: "Sie können über WhatsApp unter +34 698 50 16 76 buchen, uns eine E-Mail an bachataalairelibrelibre@gmail.com senden oder uns über Instagram @bachataalairelibre kontaktieren. Wir werden schnell antworten, um Ihren Platz zu bestätigen!"
+        }
+      ]
     },
     footer: {
       contact: "Kontaktieren Sie uns",
@@ -334,6 +418,44 @@ const translations: Record<Language, Translations> = {
       ],
       cta: "Réserver Maintenant",
     },
+    faq: {
+      title: "Questions Fréquemment Posées",
+      subtitle: "Tout ce que vous devez savoir sur les cours de bachata et salsa à Málaga",
+      questions: [
+        {
+          question: "Où se déroulent les cours de bachata à Málaga ?",
+          answer: "Nos cours de bachata et salsa en plein air se déroulent dans un lieu unique au cœur de Málaga, C/ Alcazabilla, 1, juste à côté du Théâtre Romain et de l'Alcazaba. Une atmosphère imbattable pour apprendre la danse latine sous le ciel de Málaga !"
+        },
+        {
+          question: "Ai-je besoin d'une expérience préalable ?",
+          answer: "Pas du tout ! Nos cours de bachata et salsa à Málaga sont conçus pour tous les niveaux. Que vous soyez débutant complet ou que vous ayez de l'expérience, le professeur Carlos Yépez adaptera l'enseignement à votre rythme. L'important est de venir avec l'envie d'apprendre et de s'amuser !"
+        },
+        {
+          question: "Quel est le prix des cours de bachata à Málaga ?",
+          answer: "L'atelier-cours en groupe (5-20 personnes) coûte 10 € par session, et si vous amenez un partenaire, il entre gratuitement. Les cours privés coûtent 25 € par heure. Nous offrons le meilleur rapport qualité-prix pour apprendre la bachata et la salsa à Málaga."
+        },
+        {
+          question: "Quels sont les jours et horaires des cours de danse ?",
+          answer: "Les horaires varient en fonction de la demande et de la saison. Le meilleur moyen de connaître les horaires disponibles est de nous contacter directement via WhatsApp au +34 698 50 16 76 ou via notre Instagram @bachataalairelibre."
+        },
+        {
+          question: "Dois-je amener un partenaire ?",
+          answer: "Non, ce n'est pas nécessaire ! L'un des avantages de nos cours en groupe est que nous pratiquons la rotation des partenaires pour que tout le monde puisse danser avec différentes personnes. Cela vous aide à progresser plus rapidement et rend les cours plus sociaux et amusants."
+        },
+        {
+          question: "Qu'est-ce qui rend les cours de bachata en plein air à Málaga spéciaux ?",
+          answer: "Apprendre la bachata et la salsa en plein air dans le centre de Málaga, entouré de monuments comme le Théâtre Romain et l'Alcazaba, crée une atmosphère magique et unique que vous ne trouverez pas dans les académies de danse traditionnelles. De plus, l'air frais et le cadre naturel rendent les cours plus agréables et détendus."
+        },
+        {
+          question: "Enseignez-vous uniquement la bachata ou d'autres rythmes latins aussi ?",
+          answer: "Nous nous spécialisons à la fois dans la bachata et la salsa ! Dans nos cours à Málaga, vous apprendrez les deux styles, car ils se complètent parfaitement et vous permettent de danser lors de n'importe quelle fête latine ou événement social."
+        },
+        {
+          question: "Comment puis-je réserver mon cours de bachata à Málaga ?",
+          answer: "Vous pouvez réserver via WhatsApp au +34 698 50 16 76, nous envoyer un email à bachataalairelibrelibre@gmail.com, ou nous contacter via Instagram @bachataalairelibre. Nous répondrons rapidement pour confirmer votre place !"
+        }
+      ]
+    },
     footer: {
       contact: "Contactez-nous",
       rights: "Tous droits réservés",
@@ -422,6 +544,55 @@ const translations: Record<Language, Translations> = {
         "Aprende a tu ritmo",
       ],
       cta: "Reservar Ahora",
+    },
+    faq: {
+      title: "Preguntas Frecuentes",
+      subtitle:
+        "Todo lo que necesitas saber sobre nuestras clases de bachata en Málaga",
+      questions: [
+        {
+          question: "¿Dónde se imparten las clases de bachata en Málaga?",
+          answer:
+            "Las clases se realizan al aire libre en Málaga, específicamente en C/ Alcazabilla, 1, junto a la Alcazaba. Es un espacio perfecto para bailar con vistas espectaculares y un ambiente único en el centro de Málaga.",
+        },
+        {
+          question:
+            "¿Necesito experiencia previa para tomar clases de salsa y bachata?",
+          answer:
+            "¡Para nada! Nuestras clases están diseñadas para todos los niveles. Desde principiantes que nunca han bailado hasta bailarines intermedios que quieren perfeccionar su técnica. Cada clase incluye pasos básicos y coreografías nuevas adaptadas a tu nivel.",
+        },
+        {
+          question: "¿Cuál es el precio de las clases de bachata en Málaga?",
+          answer:
+            "Las clases grupales tienen un precio especial de €10 por persona, ¡y tu pareja entra gratis! También ofrecemos clases privadas personalizadas por €25/hora. Somos una de las opciones más accesibles para aprender bachata en Málaga.",
+        },
+        {
+          question: "¿Qué días y horarios tienen las clases de baile?",
+          answer:
+            "Las clases se imparten regularmente durante la semana. Para conocer los horarios exactos y reservar tu plaza, contáctanos por WhatsApp al +34 698 50 16 76. Los grupos son reducidos (5-20 personas) para asegurar atención personalizada.",
+        },
+        {
+          question: "¿Tengo que traer pareja para las clases de bachata?",
+          answer:
+            "No es necesario traer pareja. En nuestras clases fomentamos la rotación y la práctica social, así que conocerás a otros bailarines y practicarás con diferentes personas. Es una excelente forma de hacer amigos mientras aprendes a bailar.",
+        },
+        {
+          question:
+            "¿Qué hace especial a las clases de bachata al aire libre en Málaga?",
+          answer:
+            "Bailar al aire libre en Málaga ofrece una experiencia única: el ambiente natural mejora tu estado de ánimo, reduces el estrés y disfrutas del buen clima mientras aprendes. Además, Carlos Yépez es un instructor experimentado que hace que cada clase sea divertida y educativa.",
+        },
+        {
+          question: "¿Enseñan solo bachata o también otros ritmos latinos?",
+          answer:
+            "Enseñamos tanto bachata como salsa. Cada sesión combina ambos ritmos latinos, permitiéndote ampliar tu repertorio de baile. Aprenderás los fundamentos de cada estilo y nuevas coreografías en cada clase.",
+        },
+        {
+          question: "¿Cómo puedo reservar mi clase de bachata en Málaga?",
+          answer:
+            "Es muy fácil: contacta con nosotros por WhatsApp al +34 698 50 16 76 o envía un email a bachataalairelibrelibre@gmail.com. También puedes seguirnos en Instagram @bachataalairelibre para estar al tanto de clases especiales y eventos.",
+        },
+      ],
     },
     footer: {
       contact: "Contáctanos",

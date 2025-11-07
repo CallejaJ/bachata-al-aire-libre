@@ -148,6 +148,11 @@ export default function RootLayout({
         <meta name="geo.placename" content="Málaga" />
         <meta name="geo.position" content="41.3851;2.1734" />
         <meta name="ICBM" content="41.3851, 2.1734" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"dcf4983526bc78ffa819bc82abe6eafa"})});`,
+          }}
+        />
       </head>
       <body
         className={`${poppins.variable} font-sans antialiased overflow-x-hidden`}

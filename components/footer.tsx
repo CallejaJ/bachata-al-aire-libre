@@ -13,12 +13,12 @@ export function Footer() {
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="mb-3 flex items-center gap-2">
-              <Music className="h-10 w-10 md:h-12 md:w-12" />
+              <Music className="h-8 w-8 md:h-10 md:w-10" />
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-3">
+            <h3 className="text-lg md:text-xl font-bold mb-3">
               Bachata al Aire Libre
             </h3>
-            <p className="text-base md:text-lg opacity-90 italic leading-relaxed max-w-xs">
+            <p className="text-xs md:text-sm opacity-70 italic leading-relaxed max-w-xs">
               Clases de salsa y bachata con Carlos Yépez. Únete a nuestras
               clases al aire libre y descubre el ritmo que llevas dentro.
             </p>
@@ -26,30 +26,33 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="text-center md:text-left md:pt-[52px]">
-            <h4 className="mb-4 text-lg md:text-xl font-semibold">
+            <h4 className="mb-4 text-base md:text-lg font-semibold opacity-90">
               {t.footer.contact}
             </h4>
             <div className="space-y-3">
               <div className="flex items-center justify-center md:justify-start gap-3">
-                <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm md:text-base">
-                  info@bachataalairelibre.com
-                </span>
+                <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
+                <a
+                  href="mailto:bachataalairelibrelibre@gmail.com"
+                  className="text-xs md:text-sm hover:underline opacity-80 hover:opacity-100"
+                >
+                  bachataalairelibrelibre@gmail.com
+                </a>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
-                <Phone className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm md:text-base">+34 698 50 16 76</span>
+                <Phone className="h-4 w-4 flex-shrink-0 opacity-70" />
+                <span className="text-xs md:text-sm opacity-80">+34 698 50 16 76</span>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
-                <MapPin className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm md:text-base">Málaga, Spain</span>
+                <MapPin className="h-4 w-4 flex-shrink-0 opacity-70" />
+                <span className="text-xs md:text-sm opacity-80">Málaga, Spain</span>
               </div>
             </div>
           </div>
 
           {/* Social Links */}
           <div className="text-center md:text-left md:pt-[52px]">
-            <h4 className="mb-4 text-lg md:text-xl font-semibold">
+            <h4 className="mb-4 text-base md:text-lg font-semibold opacity-90">
               Social Media
             </h4>
             <div className="flex gap-3 justify-center md:justify-start">
@@ -57,11 +60,11 @@ export function Footer() {
                 href="https://www.facebook.com/profile.php?id=61583155394342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Facebook"
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -72,11 +75,11 @@ export function Footer() {
                 href="https://www.instagram.com/bachataalairelibre/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Instagram"
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -87,11 +90,11 @@ export function Footer() {
                 href="https://www.tiktok.com/@bachataalairelibre"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="TikTok"
               >
                 <svg
-                  className="h-5 w-5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >

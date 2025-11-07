@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/how-it-works";
 import { Benefits } from "@/components/benefits";
 import { Pricing } from "@/components/pricing";
 import { Testimonials } from "@/components/testimonials";
+import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
 import { LanguageProvider } from "@/components/language-provider";
@@ -22,6 +23,7 @@ export default function Home() {
         <Benefits />
         <Pricing />
         <Testimonials />
+        <FAQ />
         <GMaps height={450} />
         <Footer />
       </main>
