@@ -8,25 +8,22 @@ import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
-import { LanguageProvider } from "@/components/language-provider";
 import GMaps from "@/components/gmaps";
 
 export default function Home() {
   return (
-    <LanguageProvider>
-      <main className="min-h-screen overflow-x-hidden w-full">
-        <Header />
-        <MusicPlayer />
-        <Hero />
-        <PhotoSlider />
-        <HowItWorks />
-        <Benefits />
-        <Pricing />
-        <Testimonials />
-        <FAQ />
-        <GMaps height={450} />
-        <Footer />
-      </main>
-    </LanguageProvider>
+    <main className="min-h-screen overflow-x-hidden w-full">
+      <Header />
+      <MusicPlayer />
+      <Hero />
+      <PhotoSlider />
+      <HowItWorks />
+      <Benefits />
+      <Pricing />
+      <Testimonials />
+      <FAQ />
+      <GMaps height={450} />
+      <Footer />
+    </main>
   );
 }

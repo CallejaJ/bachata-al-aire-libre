@@ -80,6 +80,14 @@ interface Translations {
     contact: string;
     rights: string;
   };
+  legal: {
+    legalNotice: string;
+    privacy: string;
+    cookies: string;
+    lastUpdate: string;
+    onlySpanish: string;
+    index: string;
+  };
 }
 
 const translations: Record<Language, Translations> = {
@@ -219,6 +227,14 @@ const translations: Record<Language, Translations> = {
       description: "Salsa and bachata classes with Carlos Yépez",
       contact: "Contact us",
       rights: "All rights reserved",
+    },
+    legal: {
+      legalNotice: "Legal Notice",
+      privacy: "Privacy Policy",
+      cookies: "Cookie Policy",
+      lastUpdate: "Last update",
+      onlySpanish: "Legal content is only available in Spanish",
+      index: "Index",
     },
   },
   de: {
@@ -360,6 +376,14 @@ const translations: Record<Language, Translations> = {
       contact: "Kontaktieren Sie uns",
       rights: "Alle Rechte vorbehalten",
     },
+    legal: {
+      legalNotice: "Impressum",
+      privacy: "Datenschutzerklärung",
+      cookies: "Cookie-Richtlinie",
+      lastUpdate: "Letzte Aktualisierung",
+      onlySpanish: "Rechtliche Inhalte sind nur auf Spanisch verfügbar",
+      index: "Index",
+    },
   },
   fr: {
     hero: {
@@ -500,6 +524,14 @@ const translations: Record<Language, Translations> = {
       contact: "Contactez-nous",
       rights: "Tous droits réservés",
     },
+    legal: {
+      legalNotice: "Mentions Légales",
+      privacy: "Politique de Confidentialité",
+      cookies: "Politique de Cookies",
+      lastUpdate: "Dernière mise à jour",
+      onlySpanish: "Le contenu juridique n'est disponible qu'en espagnol",
+      index: "Index",
+    },
   },
   es: {
     hero: {
@@ -639,6 +671,14 @@ const translations: Record<Language, Translations> = {
       description: "Clases de salsa y bachata con Carlos Yépez",
       contact: "Contáctanos",
       rights: "Todos los derechos reservados",
+    },
+    legal: {
+      legalNotice: "Aviso Legal",
+      privacy: "Política de Privacidad",
+      cookies: "Política de Cookies",
+      lastUpdate: "Última actualización",
+      onlySpanish: "El contenido legal solo está disponible en español",
+      index: "Índice",
     },
   },
 };

@@ -7,11 +7,11 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary text-primary-foreground py-8 px-4">
-      <div className="container mx-auto">
-        <div className="grid gap-4 md:grid-cols-3 md:items-center">
+    <footer className="bg-primary text-primary-foreground py-8 px-2">
+      <div className="container mx-auto max-w-screen-xl">
+        <div className="grid gap-16 md:grid-cols-4 md:items-start justify-items-center">
           {/* Logo */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center">
             <h3 className="text-lg md:text-xl font-bold mb-1">
               {t.footer.title}
             </h3>
@@ -21,12 +21,12 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
               {t.footer.contact}
             </h4>
             <div className="space-y-1">
-              <div className="flex items-center justify-center md:justify-start gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <a
                   href="mailto:bachataalairelibrelibre@gmail.com"
@@ -35,11 +35,11 @@ export function Footer() {
                   bachataalairelibrelibre@gmail.com
                 </a>
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <span className="text-sm opacity-80">+34 698 50 16 76</span>
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <span className="text-sm opacity-80">Málaga, Spain</span>
               </div>
@@ -47,11 +47,11 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
               Social Media
             </h4>
-            <div className="flex gap-2 justify-center md:justify-start">
+            <div className="flex gap-2 justify-center">
               <a
                 href="https://www.facebook.com/profile.php?id=61583155394342"
                 target="_blank"
@@ -97,6 +97,39 @@ export function Footer() {
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
               </a>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className="text-center">
+            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
+              Legal
+            </h4>
+            <div className="space-y-1">
+              <div>
+                <a
+                  href="/aviso-legal"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                >
+                  Aviso Legal
+                </a>
+              </div>
+              <div>
+                <a
+                  href="/privacidad"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                >
+                  Privacidad
+                </a>
+              </div>
+              <div>
+                <a
+                  href="/cookies"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                >
+                  Cookies
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -89,6 +89,70 @@ export function PhotoSlider() {
       },
       alt_description: "Salsa party",
     },
+    {
+      id: "10",
+      urls: {
+        regular: "/images/slider (10).jpeg",
+        small: "/images/slider (10).jpeg",
+      },
+      alt_description: "Bachata class outdoors",
+    },
+    {
+      id: "11",
+      urls: {
+        regular: "/images/slider (11).jpeg",
+        small: "/images/slider (11).jpeg",
+      },
+      alt_description: "Dance students",
+    },
+    {
+      id: "12",
+      urls: {
+        regular: "/images/slider (14).jpeg",
+        small: "/images/slider (14).jpeg",
+      },
+      alt_description: "Outdoor dance session",
+    },
+    {
+      id: "13",
+      urls: {
+        regular: "/images/slider (15).jpeg",
+        small: "/images/slider (15).jpeg",
+      },
+      alt_description: "Dancing together",
+    },
+    {
+      id: "14",
+      urls: {
+        regular: "/images/slider (17).jpeg",
+        small: "/images/slider (17).jpeg",
+      },
+      alt_description: "Salsa moves",
+    },
+    {
+      id: "15",
+      urls: {
+        regular: "/images/slider (18).jpeg",
+        small: "/images/slider (18).jpeg",
+      },
+      alt_description: "Dance practice",
+    },
+    {
+      id: "16",
+      urls: {
+        regular: "/images/slider (19).jpeg",
+        small: "/images/slider (19).jpeg",
+      },
+      alt_description: "Group dancing",
+    },
+    {
+      id: "17",
+      urls: {
+        regular: "/images/slider (20).jpeg",
+        small: "/images/slider (20).jpeg",
+      },
+      alt_description: "Bachata al aire libre",
+    },
   ]);
 
   useEffect(() => {

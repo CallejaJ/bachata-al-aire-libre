@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import WhatsAppWidget from "@/components/whatsapp-widget";
+import { LanguageProvider } from "@/components/language-provider";
 import "../styles/globals.css";
 
 const poppins = Poppins({
@@ -157,13 +158,15 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-sans antialiased overflow-x-hidden`}
       >
-        {children}
-        <WhatsAppWidget
-          phoneNumber="34698501676"
-          message="Hola Carlos, me gustaría información sobre las clases de bachata al aire libre"
-          companyName="Bachata al Aire Libre"
-        />
-        <Analytics />
+        <LanguageProvider>
+          {children}
+          <WhatsAppWidget
+            phoneNumber="34698501676"
+            message="Hola Carlos, me gustaría información sobre las clases de bachata al aire libre"
+            companyName="Bachata al Aire Libre"
+          />
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );
