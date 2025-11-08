@@ -22,21 +22,15 @@ Como profesor de bachata que lleva años en la escena malagueña, te voy a compa
 
 **¿Por qué es especial?**
 
-
 - Clases al aire libre (¡gratis el primer día!)
-
 
 - Ambiente relajado y sin presión
 
-
 - Grupos reducidos
-
 
 - Música en vivo ocasional
 
-
 - Práctica social después de clase
-
 
 **Precio**: Muy accesible, con bonos disponibles
 
@@ -52,18 +46,13 @@ Una de las escuelas más establecidas de Málaga. Ofrecen clases estructuradas y
 
 **Ventajas:**
 
-
 - Profesores experimentados
-
 
 - Instalaciones amplias
 
-
 - Horarios flexibles
 
-
 - Comunidad activa
-
 
 ### 3. Bailonga Málaga
 
@@ -187,191 +176,102 @@ Más para tomar algo que para bailar, pero a veces hay sorpresas.
 
 ### Marzo: Málaga Salsa Congress
 
-
 - 3 días de workshops
-
-
 - Artistas internacionales
-
-
 - Competiciones
-
-
 - Fiestas hasta el amanecer
-
 
 ### Junio: Bachata Stars Málaga
 
-
 - Especializado en bachata sensual
-
-
 - Profesores de nivel mundial
-
-
 - Shows espectaculares
-
 
 ### Octubre: Costa del Sol Kizomba Festival
 
-
 - Para los amantes del kizomba
-
-
 - Ambiente íntimo
-
-
 - Urban kiz y kizomba tradicional
-
 
 ### Diciembre: Fiesta de Navidad Latina
 
-
 - Evento benéfico
-
-
 - Todas las escuelas juntas
-
-
 - Sorteos y regalos
 
 ## 💡 Consejos para Disfrutar la Escena Malagueña
 
 ### Para Principiantes:
 
-
 1. **Empieza con clases**: No vayas directo a los sociales
-
-
 2. **Llega temprano**: Los eventos suelen tener clase incluida antes
-
-
 3. **No tengas miedo**: Todos fuimos principiantes
-
-
 4. **Pide bailar**: La comunidad es muy acogedora
-
 
 ### Para Visitantes:
 
-
 1. **Consulta el calendario**: Los eventos cambian según temporada
-
-
 2. **Únete a grupos de WhatsApp**: Hay varios para la comunidad
-
-
 3. **Alquila en el centro**: Podrás ir andando a muchos sitios
-
-
 4. **Aprende algo de español**: Aunque mucha gente habla inglés
-
 
 ### Para Todos:
 
-
 1. **Hidrátate**: Málaga puede ser calurosa
-
-
 2. **Vístete cómodo**: Zapatos adecuados para bailar
-
-
 3. **Respeta el código social**: Agradece cada baile
-
-
 4. **Network**: Las mejores experiencias vienen de las amistades
 
 ## 🗺️ Mapa de Zonas
 
 ### Centro Histórico
 
-
 - Mayor concentración de bares
-
-
 - Fácil moverse andando
-
-
 - Ambiente turístico
-
 
 ### Pedregalejo
 
-
 - Más local y auténtico
-
-
 - Cerca de la playa
-
-
 - Parking más fácil
-
 
 ### Universidad
 
-
 - Ambiente más joven
-
-
 - Precios más bajos
-
-
 - Eventos más informales
 
 ## 🚗 Cómo Moverse
 
 **Mejor opción**: Uber/Cabify
 
-
 - Los fines de semana los taxis son difíciles
-
-
 - Parking en el centro es complicado
-
-
 - Buses nocturnos limitados
-
 
 **Plan B**: Bicicleta
 
-
 - Málaga tiene buen carril bici
-
-
 - Muchos lugares tienen aparcabicicletas
 
 ## 📱 Recursos Útiles
 
 **Grupos de Facebook:**
 
-
 - "Bachata Málaga"
-
-
 - "Salsa y Bachata Costa del Sol"
-
-
 - "Málaga Latino Dance"
-
 
 **Instagram:**
 
-
 - @bachata_malaga
-
-
 - @salsamalaga
-
-
 - @malagalatindance
-
 
 **Apps:**
 
-
 - Meetup (para eventos)
-
-
 - Bachata Barcelona (tiene sección Málaga)
 
 ## Mi Recomendación Personal
@@ -387,18 +287,10 @@ Si eres nuevo en Málaga o en la bachata, te recomiendo:
 
 Regularmente organizo:
 
-
 - **Practicas sociales** después de clase
-
-
 - **Salidas grupales** a eventos grandes
-
-
 - **Picnics bailables** en parques
-
-
 - **Workshops intensivos** de fin de semana
-
 
 Sígueme en redes sociales para estar al día.
 

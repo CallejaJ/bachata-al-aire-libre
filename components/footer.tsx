@@ -1,7 +1,8 @@
 "use client";
 
 import { useLanguage } from "./language-provider";
-import { Mail, Phone, MapPin, Music } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -9,37 +10,48 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-8 px-2">
       <div className="container mx-auto max-w-screen-xl">
-        <div className="grid gap-16 md:grid-cols-4 md:items-start justify-items-center">
+        <div className="grid gap-12 md:grid-cols-5 md:items-start">
           {/* Logo */}
-          <div className="flex flex-col items-center text-center">
-            <h3 className="text-lg md:text-xl font-bold mb-1">
+          <div className="flex flex-col items-center justify-center">
+            <Image 
+              src="/logo/logo-trans.png" 
+              alt="Bachata al Aire Libre" 
+              width={120} 
+              height={120}
+              className="invert brightness-0 drop-shadow-lg"
+            />
+          </div>
+
+          {/* Title */}
+          <div className="flex flex-col items-start text-left">
+            <h3 className="text-lg md:text-xl font-bold mb-2">
               {t.footer.title}
             </h3>
-            <p className="text-sm opacity-70 leading-tight max-w-xs">
+            <p className="text-sm opacity-80 leading-relaxed">
               {t.footer.description}
             </p>
           </div>
 
           {/* Contact Info */}
-          <div className="text-center">
-            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
+          <div className="text-left">
+            <h4 className="mb-3 text-base md:text-lg font-semibold opacity-90">
               {t.footer.contact}
             </h4>
-            <div className="space-y-1">
-              <div className="flex items-center justify-center gap-2">
-                <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
+            <div className="space-y-2">
+              <div className="flex items-start gap-2">
+                <Mail className="h-4 w-4 flex-shrink-0 opacity-70 mt-0.5" />
                 <a
                   href="mailto:bachataalairelibrelibre@gmail.com"
-                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100 break-all"
                 >
-                  bachataalairelibrelibre@gmail.com
+                  bachataalairelibre<wbr />libre@gmail.com
                 </a>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <span className="text-sm opacity-80">+34 698 50 16 76</span>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <span className="text-sm opacity-80">Málaga, Spain</span>
               </div>
@@ -47,20 +59,20 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="text-center">
-            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
+          <div className="text-left">
+            <h4 className="mb-3 text-base md:text-lg font-semibold opacity-90">
               Social Media
             </h4>
-            <div className="flex gap-2 justify-center">
+            <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/profile.php?id=61583155394342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Facebook"
               >
                 <svg
-                  className="h-3.5 w-3.5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -71,11 +83,11 @@ export function Footer() {
                 href="https://www.instagram.com/bachataalairelibre/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Instagram"
               >
                 <svg
-                  className="h-3.5 w-3.5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -86,11 +98,11 @@ export function Footer() {
                 href="https://www.tiktok.com/@bachataalairelibre"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="TikTok"
               >
                 <svg
-                  className="h-3.5 w-3.5"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -100,16 +112,16 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Legal & Blog Links */}
-          <div className="text-center">
-            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
+          {/* Links */}
+          <div className="text-left">
+            <h4 className="mb-3 text-base md:text-lg font-semibold opacity-90">
               Enlaces
             </h4>
-            <div className="space-y-1">
+            <div className="space-y-2">
               <div>
                 <a
                   href="/blog"
-                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
                   Blog
                 </a>
@@ -117,7 +129,7 @@ export function Footer() {
               <div>
                 <a
                   href="/aviso-legal"
-                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
                   Aviso Legal
                 </a>
@@ -125,7 +137,7 @@ export function Footer() {
               <div>
                 <a
                   href="/privacidad"
-                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
                   Privacidad
                 </a>
@@ -133,7 +145,7 @@ export function Footer() {
               <div>
                 <a
                   href="/cookies"
-                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
                   Cookies
                 </a>

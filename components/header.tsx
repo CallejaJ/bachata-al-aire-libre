@@ -3,9 +3,10 @@
 import { useLanguage } from "./language-provider";
 import { Button } from "./ui/button";
 import { LanguageSelector } from "./language-selector";
-import { Music, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 export function Header() {
   const { t } = useLanguage();
@@ -76,7 +77,13 @@ export function Header() {
             onClick={handleLogoClick}
             className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity z-50"
           >
-            <Music className="h-6 w-6 md:h-8 md:w-8 text-white drop-shadow-lg" />
+            <Image 
+              src="/logo/logo-trans.png" 
+              alt="Logo" 
+              width={32} 
+              height={32}
+              className="h-6 w-6 md:h-8 md:w-8 invert brightness-0 drop-shadow-lg"
+            />
             <span className="text-base md:text-xl font-bold text-white drop-shadow-lg">
               Carlos Yépez
             </span>
