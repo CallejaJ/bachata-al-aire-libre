@@ -145,8 +145,14 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Author Bio */}
           <div className="mt-16 pt-8 border-t border-border">
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl flex-shrink-0">
-                💃
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <Image
+                  src="/logo/logo-trans.png"
+                  alt={post.author}
+                  width={64}
+                  height={64}
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Sobre {post.author}</h3>

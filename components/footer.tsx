@@ -13,10 +13,10 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-5 md:items-start">
           {/* Logo */}
           <div className="flex flex-col items-center justify-center">
-            <Image 
-              src="/logo/logo-trans.png" 
-              alt="Bachata al Aire Libre" 
-              width={120} 
+            <Image
+              src="/logo/logo-trans.png"
+              alt="Bachata al Aire Libre"
+              width={120}
               height={120}
               className="invert brightness-0 drop-shadow-lg"
             />
@@ -44,7 +44,9 @@ export function Footer() {
                   href="mailto:bachataalairelibrelibre@gmail.com"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 break-all"
                 >
-                  bachataalairelibre<wbr />libre@gmail.com
+                  bachataalairelibre
+                  <wbr />
+                  libre@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -115,7 +117,7 @@ export function Footer() {
           {/* Links */}
           <div className="text-left">
             <h4 className="mb-3 text-base md:text-lg font-semibold opacity-90">
-              Enlaces
+              {t.footer.links}
             </h4>
             <div className="space-y-2">
               <div>
@@ -123,7 +125,7 @@ export function Footer() {
                   href="/blog"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  Blog
+                  {t.footer.blog}
                 </a>
               </div>
               <div>
@@ -131,7 +133,7 @@ export function Footer() {
                   href="/aviso-legal"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  Aviso Legal
+                  {t.legal.legalNotice}
                 </a>
               </div>
               <div>
@@ -139,7 +141,7 @@ export function Footer() {
                   href="/privacidad"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  Privacidad
+                  {t.legal.privacy}
                 </a>
               </div>
               <div>
@@ -147,7 +149,7 @@ export function Footer() {
                   href="/cookies"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  Cookies
+                  {t.legal.cookies}
                 </a>
               </div>
             </div>

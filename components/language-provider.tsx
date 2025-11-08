@@ -79,6 +79,8 @@ interface Translations {
     description: string;
     contact: string;
     rights: string;
+    links: string;
+    blog: string;
   };
   legal: {
     legalNotice: string;
@@ -227,6 +229,8 @@ const translations: Record<Language, Translations> = {
       description: "Salsa and bachata classes with Carlos Yépez",
       contact: "Contact us",
       rights: "All rights reserved",
+      links: "Links",
+      blog: "Blog",
     },
     legal: {
       legalNotice: "Legal Notice",
@@ -375,6 +379,8 @@ const translations: Record<Language, Translations> = {
       description: "Salsa- und Bachata-Kurse mit Carlos Yépez",
       contact: "Kontaktieren Sie uns",
       rights: "Alle Rechte vorbehalten",
+      links: "Links",
+      blog: "Blog",
     },
     legal: {
       legalNotice: "Impressum",
@@ -523,6 +529,8 @@ const translations: Record<Language, Translations> = {
       description: "Cours de salsa et bachata avec Carlos Yépez",
       contact: "Contactez-nous",
       rights: "Tous droits réservés",
+      links: "Liens",
+      blog: "Blog",
     },
     legal: {
       legalNotice: "Mentions Légales",
@@ -671,6 +679,8 @@ const translations: Record<Language, Translations> = {
       description: "Clases de salsa y bachata con Carlos Yépez",
       contact: "Contáctanos",
       rights: "Todos los derechos reservados",
+      links: "Enlaces",
+      blog: "Blog",
     },
     legal: {
       legalNotice: "Aviso Legal",
