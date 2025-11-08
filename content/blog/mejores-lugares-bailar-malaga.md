@@ -1,6 +1,6 @@
 ---
 title: "Los Mejores Lugares para Bailar Bachata y Salsa en Málaga"
-date: "2025-11-08"
+date: "2023-09-05"
 author: "Carlos Yépez"
 excerpt: "Guía completa de los mejores spots, eventos y clases para bailar bachata y salsa en Málaga. Desde clubes hasta clases al aire libre."
 image: ""

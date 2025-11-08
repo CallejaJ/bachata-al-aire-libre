@@ -1,6 +1,6 @@
 ---
 title: "¿Puedo Aprender Bachata Si Soy Mayor de 40, 50 o 60 Años?"
-date: "2025-11-01"
+date: "2025-06-27"
 author: "Carlos Yépez"
 excerpt: "¿Crees que eres demasiado mayor para aprender bachata? Te cuento la verdad sobre bailar a cualquier edad y por qué es perfecto para adultos."
 image: ""

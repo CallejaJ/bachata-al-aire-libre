@@ -84,20 +84,37 @@ export default async function BlogPage() {
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    {/* Image */}
-                    <div className="relative aspect-video overflow-hidden bg-muted">
-                      {post.image ? (
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                          <span className="text-6xl">💃</span>
-                        </div>
-                      )}
+                    {/* Imagen aleatoria solo en el header visual */}
+                    <div className="w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
+                      <Image
+                        src={(() => {
+                          const sliderImages = [
+                            "/images/slider/slider (1).jpg",
+                            "/images/slider/slider (2).jpg",
+                            "/images/slider/slider (3).jpg",
+                            "/images/slider/slider (4).jpg",
+                            "/images/slider/slider (5).jpeg",
+                            "/images/slider/slider (6).jpg",
+                            "/images/slider/slider (7).jpg",
+                            "/images/slider/slider (8).jpeg",
+                            "/images/slider/slider (9).jpg",
+                            "/images/slider/slider (10).jpeg",
+                            "/images/slider/slider (11).jpeg",
+                            "/images/slider/slider (12).jpeg",
+                            "/images/slider/slider (13).jpeg",
+                            "/images/slider/slider (14).jpeg",
+                            "/images/slider/slider (15).jpeg",
+                            "/images/slider/slider (16).jpeg",
+                            "/images/slider/slider (17).jpeg",
+                            "/images/slider/slider (18).jpeg",
+                          ];
+                          return post.image || sliderImages[Math.floor(Math.random() * sliderImages.length)];
+                        })()}
+                        alt={post.title}
+                        width={400}
+                        height={160}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
 
                     {/* Content */}

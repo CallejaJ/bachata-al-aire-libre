@@ -1,6 +1,6 @@
 ---
 title: "5 Beneficios de Bailar Bachata que Cambiarán tu Vida"
-date: "2025-11-05"
+date: "2023-03-15"
 author: "Carlos Yépez"
 excerpt: "Descubre cómo la bachata no solo es un baile sensual, sino también una actividad que mejora tu salud física, mental y emocional."
 image: ""

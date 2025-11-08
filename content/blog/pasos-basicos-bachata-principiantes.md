@@ -1,6 +1,6 @@
 ---
 title: "Pasos Básicos de Bachata para Principiantes: Guía Completa"
-date: "2025-11-03"
+date: "2023-06-10"
 author: "Carlos Yépez"
 excerpt: "Aprende los fundamentos de la bachata desde cero. Una guía paso a paso para dominar el básico lateral, el básico en pareja y tus primeros giros."
 image: ""

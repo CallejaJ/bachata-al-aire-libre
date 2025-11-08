@@ -52,10 +52,35 @@ export async function generateMetadata({
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-
   if (!post) {
     notFound();
   }
+
+  // Lista de imágenes slider
+  const sliderImages = [
+    "/images/slider/slider (1).jpg",
+    "/images/slider/slider (2).jpg",
+    "/images/slider/slider (3).jpg",
+    "/images/slider/slider (4).jpg",
+    "/images/slider/slider (5).jpeg",
+    "/images/slider/slider (6).jpg",
+    "/images/slider/slider (7).jpg",
+    "/images/slider/slider (8).jpeg",
+    "/images/slider/slider (9).jpg",
+    "/images/slider/slider (10).jpeg",
+    "/images/slider/slider (11).jpeg",
+    "/images/slider/slider (12).jpeg",
+    "/images/slider/slider (13).jpeg",
+    "/images/slider/slider (14).jpeg",
+    "/images/slider/slider (15).jpeg",
+    "/images/slider/slider (16).jpeg",
+    "/images/slider/slider (17).jpeg",
+    "/images/slider/slider (18).jpeg",
+  ];
+  // Selecciona una imagen aleatoria si no hay post.image
+  const randomSliderImage =
+    sliderImages[Math.floor(Math.random() * sliderImages.length)];
+  const featuredImage = post.image || randomSliderImage;
 
   const relatedPosts = await getRelatedPosts(slug);
 
@@ -113,17 +138,15 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* Featured Image */}
-          {post.image && (
-            <div className="relative aspect-video rounded-xl overflow-hidden mb-12 bg-muted">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
+          <div className="relative aspect-video rounded-xl overflow-hidden mb-12 bg-muted">
+            <Image
+              src={featuredImage}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
           {/* Share Button */}
           <div className="mb-8 flex justify-end">
@@ -195,18 +218,17 @@ export default async function BlogPostPage({ params }: PageProps) {
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all"
                 >
                   <div className="relative aspect-video overflow-hidden bg-muted">
-                    {relatedPost.image ? (
-                      <Image
-                        src={relatedPost.image}
-                        alt={relatedPost.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                        <span className="text-4xl">💃</span>
-                      </div>
-                    )}
+                    <Image
+                      src={
+                        relatedPost.image ||
+                        sliderImages[
+                          Math.floor(Math.random() * sliderImages.length)
+                        ]
+                      }
+                      alt={relatedPost.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">

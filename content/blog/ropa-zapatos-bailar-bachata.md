@@ -1,6 +1,6 @@
 ---
 title: "¿Qué Ropa y Zapatos Usar para Bailar Bachata? Guía Práctica"
-date: "2025-11-02"
+date: "2025-02-14"
 author: "Carlos Yépez"
 excerpt: "¿Primera clase de bachata y no sabes qué ponerte? Te explico exactamente qué ropa y zapatos necesitas, qué evitar y tips para clima de Málaga."
 image: ""

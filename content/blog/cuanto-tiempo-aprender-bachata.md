@@ -1,6 +1,6 @@
 ---
 title: "¿Cuánto Tiempo Se Tarda en Aprender Bachata? Guía Realista por Niveles"
-date: "2025-11-06"
+date: "2024-05-18"
 author: "Carlos Yépez"
 excerpt: "¿Cuántas clases necesitas para bailar bachata? Te doy un timeline realista de cuánto tiempo toma cada nivel, desde principiante hasta avanzado."
 image: ""

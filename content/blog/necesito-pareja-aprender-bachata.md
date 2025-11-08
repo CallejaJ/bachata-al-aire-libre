@@ -1,6 +1,6 @@
 ---
 title: "¿Necesito Pareja para Aprender Bachata? Mitos y Realidades"
-date: "2025-11-04"
+date: "2024-09-03"
 author: "Carlos Yépez"
 excerpt: "¿Vienes solo a Málaga y quieres aprender bachata? Te explico por qué NO necesitas pareja, cómo funcionan las clases y cómo encontrar compañeros de baile."
 image: ""

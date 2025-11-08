@@ -1,6 +1,6 @@
 ---
 title: "¿Cuál es la Diferencia entre Bachata y Salsa? Guía para Principiantes"
-date: "2025-11-07"
+date: "2024-01-22"
 author: "Carlos Yépez"
 excerpt: "¿No sabes si aprender bachata o salsa? Te explico las diferencias clave entre ambos bailes, sus ritmos, movimientos y cuál es mejor para empezar."
 image: ""
