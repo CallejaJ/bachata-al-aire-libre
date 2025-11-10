@@ -371,8 +371,6 @@ En Málaga específicamente, con tanto turista y estudiante internacional, venir
 
 **Así que mi respuesta es clara**: ¡Ven solo/a y disfruta! Te sorprenderá lo rápido que haces amigos.
 
-Te espero en nuestras clases al aire libre. ¡Primera clase gratis para que veas cómo es! 💃🕺
-
 ---
 
 ## _¿Estás en Malaga capital y quieres aprender a bailar bachata al aire libre? Contacta conmigo: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
