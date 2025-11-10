@@ -9,7 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
 export function Header() {
-  const { t } = useLanguage();
+  const { t, setLanguage, language } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -55,11 +55,11 @@ export function Header() {
   };
 
   const navItems = [
-    { label: "Inicio", action: () => handleLogoClick() },
-    { label: "Cómo Funciona", action: () => handleNavClick("como-funciona") },
-    { label: "Beneficios", action: () => handleNavClick("beneficios") },
-    { label: "Precios", action: () => handleNavClick("pricing") },
-    { label: "Blog", action: () => handleBlogClick() },
+    { label: t.hero.title || "Inicio", action: () => handleLogoClick() },
+    { label: t.howItWorks.title || "Cómo Funciona", action: () => handleNavClick("como-funciona") },
+    { label: t.benefits.title || "Beneficios", action: () => handleNavClick("beneficios") },
+    { label: t.pricing.title || "Precios", action: () => handleNavClick("pricing") },
+    { label: t.footer.blog || "Blog", action: () => handleBlogClick() },
   ];
 
   return (
@@ -114,8 +114,10 @@ export function Header() {
               {t.hero.cta}
             </Button>
 
-            {/* Language Selector */}
-            <LanguageSelector />
+            {/* Language Selector - solo en desktop */}
+            <div className="hidden lg:block">
+              <LanguageSelector />
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -135,6 +137,18 @@ export function Header() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 space-y-1 border-t border-white/10 pt-4">
+            {/* Idiomas en menú hamburguesa - estilo borde blanco, fondo transparente */}
+            <div className="flex gap-2 mb-2 justify-center">
+              {['es','en','de','fr'].map((lang) => (
+                <button
+                  key={lang}
+                  className={`px-3 py-1 rounded font-semibold text-xs border border-white text-white bg-transparent hover:bg-white/10 transition ${lang === t.hero.cta.slice(-2).toLowerCase() || lang === language ? 'bg-white/10 border-2' : ''}`}
+                  onClick={() => { setIsMobileMenuOpen(false); setLanguage(lang as any); }}
+                >
+                  {lang.toUpperCase()}
+                </button>
+              ))}
+            </div>
             {navItems.map((item) => (
               <button
                 key={item.label}
@@ -144,11 +158,10 @@ export function Header() {
                 {item.label}
               </button>
             ))}
-            
-            {/* CTA in Mobile Menu */}
+            {/* CTA in Mobile Menu - color cambiado a azul sólido */}
             <button
               onClick={() => handleNavClick("pricing")}
-              className="block w-full text-left px-4 py-3 mt-2 text-base font-bold text-primary bg-primary/10 hover:bg-primary/20 rounded-lg transition-all border border-primary/30"
+              className="block w-full text-left px-4 py-3 mt-2 text-base font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all border border-blue-700 shadow-lg"
             >
               {t.hero.cta}
             </button>
