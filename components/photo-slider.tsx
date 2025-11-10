@@ -20,136 +20,136 @@ export function PhotoSlider() {
     {
       id: "1",
       urls: {
-        regular: "/images/slider/slider (1).jpg",
-        small: "/images/slider/slider (1).jpg",
+        regular: "/images/slider/optimized/slider(1).webp",
+        small: "/images/slider/optimized/slider(1).webp",
       },
       alt_description: "Salsa dance class",
     },
     {
       id: "2",
       urls: {
-        regular: "/images/slider/slider (2).jpg",
-        small: "/images/slider/slider (2).jpg",
+        regular: "/images/slider/optimized/slider(2).webp",
+        small: "/images/slider/optimized/slider(2).webp",
       },
       alt_description: "Bachata dance",
     },
     {
       id: "3",
       urls: {
-        regular: "/images/slider/slider (3).jpg",
-        small: "/images/slider/slider (3).jpg",
+        regular: "/images/slider/optimized/slider(3).webp",
+        small: "/images/slider/optimized/slider(3).webp",
       },
       alt_description: "Dance performance",
     },
     {
       id: "4",
       urls: {
-        regular: "/images/slider/slider (4).jpg",
-        small: "/images/slider/slider (4).jpg",
+        regular: "/images/slider/optimized/slider(4).webp",
+        small: "/images/slider/optimized/slider(4).webp",
       },
       alt_description: "Latin dance",
     },
     {
       id: "5",
       urls: {
-        regular: "/images/slider/slider (5).jpeg",
-        small: "/images/slider/slider (5).jpeg",
+        regular: "/images/slider/optimized/slider(5).webp",
+        small: "/images/slider/optimized/slider(5).webp",
       },
       alt_description: "Salsa couple",
     },
     {
       id: "6",
       urls: {
-        regular: "/images/slider/slider (6).jpg",
-        small: "/images/slider/slider (6).jpg",
+        regular: "/images/slider/optimized/slider(6).webp",
+        small: "/images/slider/optimized/slider(6).webp",
       },
       alt_description: "Dance lessons",
     },
     {
       id: "7",
       urls: {
-        regular: "/images/slider/slider (7).jpg",
-        small: "/images/slider/slider (7).jpg",
+        regular: "/images/slider/optimized/slider(7).webp",
+        small: "/images/slider/optimized/slider(7).webp",
       },
       alt_description: "Bachata couple",
     },
     {
       id: "8",
       urls: {
-        regular: "/images/slider/slider (8).jpeg",
-        small: "/images/slider/slider (8).jpeg",
+        regular: "/images/slider/optimized/slider(8).webp",
+        small: "/images/slider/optimized/slider(8).webp",
       },
       alt_description: "Dance community",
     },
     {
       id: "9",
       urls: {
-        regular: "/images/slider/slider (9).jpg",
-        small: "/images/slider/slider (9).jpg",
+        regular: "/images/slider/optimized/slider(9).webp",
+        small: "/images/slider/optimized/slider(9).webp",
       },
       alt_description: "Salsa party",
     },
     {
       id: "10",
       urls: {
-        regular: "/images/slider/slider (10).jpeg",
-        small: "/images/slider/slider (10).jpeg",
+        regular: "/images/slider/optimized/slider(10).webp",
+        small: "/images/slider/optimized/slider(10).webp",
       },
       alt_description: "Bachata class outdoors",
     },
     {
       id: "11",
       urls: {
-        regular: "/images/slider/slider (11).jpeg",
-        small: "/images/slider/slider (11).jpeg",
+        regular: "/images/slider/optimized/slider(11).webp",
+        small: "/images/slider/optimized/slider(11).webp",
       },
       alt_description: "Dance students",
     },
     {
       id: "12",
       urls: {
-        regular: "/images/slider/slider (12).jpeg",
-        small: "/images/slider/slider (12).jpeg",
+        regular: "/images/slider/optimized/slider(12).webp",
+        small: "/images/slider/optimized/slider(12).webp",
       },
       alt_description: "Outdoor dance session",
     },
     {
       id: "13",
       urls: {
-        regular: "/images/slider/slider (13).jpeg",
-        small: "/images/slider/slider (13).jpeg",
+        regular: "/images/slider/optimized/slider(13).webp",
+        small: "/images/slider/optimized/slider(13).webp",
       },
       alt_description: "Dancing together",
     },
     {
       id: "14",
       urls: {
-        regular: "/images/slider/slider (14).jpeg",
-        small: "/images/slider/slider (14).jpeg",
+        regular: "/images/slider/optimized/slider(14).webp",
+        small: "/images/slider/optimized/slider(14).webp",
       },
       alt_description: "Salsa moves",
     },
     {
       id: "15",
       urls: {
-        regular: "/images/slider/slider (15).jpeg",
-        small: "/images/slider/slider (15).jpeg",
+        regular: "/images/slider/optimized/slider(15).webp",
+        small: "/images/slider/optimized/slider(15).webp",
       },
       alt_description: "Dance practice",
     },
     {
       id: "16",
       urls: {
-        regular: "/images/slider/slider (16).jpeg",
-        small: "/images/slider/slider (16).jpeg",
+        regular: "/images/slider/optimized/slider(16).webp",
+        small: "/images/slider/optimized/slider(16).webp",
       },
       alt_description: "Group dancing",
     },
     {
       id: "17",
       urls: {
-        regular: "/images/slider/slider (17).jpeg",
-        small: "/images/slider/slider (17).jpeg",
+        regular: "/images/slider/optimized/slider(17).webp",
+        small: "/images/slider/optimized/slider(17).webp",
       },
       alt_description: "Bachata al aire libre",
     },

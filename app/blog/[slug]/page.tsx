@@ -56,25 +56,25 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  // Lista de imágenes con IDs únicos (17 imágenes) - DEBE COINCIDIR CON blog/page.tsx
+  // Lista de imágenes con IDs únicos (17 imágenes)
   const sliderImages = [
-    { id: 1, path: "/images/slider/slider (1).jpg" },
-    { id: 2, path: "/images/slider/slider (2).jpg" },
-    { id: 3, path: "/images/slider/slider (3).jpg" },
-    { id: 4, path: "/images/slider/slider (4).jpg" },
-    { id: 5, path: "/images/slider/slider (5).jpeg" },
-    { id: 6, path: "/images/slider/slider (6).jpg" },
-    { id: 7, path: "/images/slider/slider (7).jpg" },
-    { id: 8, path: "/images/slider/slider (8).jpeg" },
-    { id: 9, path: "/images/slider/slider (9).jpg" },
-    { id: 10, path: "/images/slider/slider (10).jpeg" },
-    { id: 11, path: "/images/slider/slider (11).jpeg" },
-    { id: 12, path: "/images/slider/slider (12).jpeg" },
-    { id: 13, path: "/images/slider/slider (13).jpeg" },
-    { id: 14, path: "/images/slider/slider (14).jpeg" },
-    { id: 15, path: "/images/slider/slider (15).jpeg" },
-    { id: 16, path: "/images/slider/slider (16).jpeg" },
-    { id: 17, path: "/images/slider/slider (17).jpeg" },
+    { id: 1, path: "/images/slider/optimized/slider(1).webp" },
+    { id: 2, path: "/images/slider/optimized/slider(2).webp" },
+    { id: 3, path: "/images/slider/optimized/slider(3).webp" },
+    { id: 4, path: "/images/slider/optimized/slider(4).webp" },
+    { id: 5, path: "/images/slider/optimized/slider(5).webp" },
+    { id: 6, path: "/images/slider/optimized/slider(6).webp" },
+    { id: 7, path: "/images/slider/optimized/slider(7).webp" },
+    { id: 8, path: "/images/slider/optimized/slider(8).webp" },
+    { id: 9, path: "/images/slider/optimized/slider(9).webp" },
+    { id: 10, path: "/images/slider/optimized/slider(10).webp" },
+    { id: 11, path: "/images/slider/optimized/slider(11).webp" },
+    { id: 12, path: "/images/slider/optimized/slider(12).webp" },
+    { id: 13, path: "/images/slider/optimized/slider(13).webp" },
+    { id: 14, path: "/images/slider/optimized/slider(14).webp" },
+    { id: 15, path: "/images/slider/optimized/slider(15).webp" },
+    { id: 16, path: "/images/slider/optimized/slider(16).webp" },
+    { id: 17, path: "/images/slider/optimized/slider(17).webp" },
   ];
 
   // Función para convertir slug a imagen de forma determinística
