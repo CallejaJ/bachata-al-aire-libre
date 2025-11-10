@@ -153,14 +153,6 @@ export function PhotoSlider() {
       },
       alt_description: "Bachata al aire libre",
     },
-    {
-      id: "18",
-      urls: {
-        regular: "/images/slider/slider (18).jpeg",
-        small: "/images/slider/slider (18).jpeg",
-      },
-      alt_description: "Dance event",
-    },
   ]);
 
   useEffect(() => {

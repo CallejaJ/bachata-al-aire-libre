@@ -1,278 +1,252 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { ShareButton } from "@/components/share-button";
-import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
-import { notFound } from "next/navigation";
-import Image from "next/image";
+import { getAllPosts, getAllTags } from "@/lib/blog";
 import Link from "next/link";
-import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
+import Image from "next/image";
+import { Calendar, Clock, Tag } from "lucide-react";
 import { Metadata } from "next";
 
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
+export const metadata: Metadata = {
+  title: "Blog - Bachata al Aire Libre | Consejos, Tutoriales y Eventos",
+  description:
+    "Aprende bachata con nuestros artículos: técnicas, beneficios para la salud, los mejores lugares en Málaga y más. Todo sobre bachata y salsa.",
+  keywords: [
+    "blog bachata",
+    "tutoriales bachata",
+    "aprender bachata",
+    "eventos málaga",
+    "clases bachata",
+  ],
+  openGraph: {
+    title: "Blog - Bachata al Aire Libre",
+    description: "Consejos, tutoriales y eventos de bachata y salsa en Málaga",
+    type: "website",
+  },
+};
+
+interface BlogPageProps {
+  searchParams: Promise<{ tag?: string }>;
 }
 
-export async function generateStaticParams() {
+export default async function BlogPage({ searchParams }: BlogPageProps) {
   const posts = await getAllPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+  const tags = await getAllTags();
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  // Obtener el tag activo desde searchParams
+  const params = await searchParams;
+  const activeTag = params.tag || "";
 
-  if (!post) {
-    return {
-      title: "Post no encontrado",
-    };
-  }
+  // Filtrar posts por tag activo (case-insensitive)
+  const filteredPosts = activeTag
+    ? posts.filter((post) =>
+        post.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase())
+      )
+    : posts;
 
-  return {
-    title: `${post.title} | Blog Bachata al Aire Libre`,
-    description: post.excerpt,
-    keywords: [...post.tags, "bachata", "salsa", "málaga", "baile"],
-    authors: [{ name: post.author }],
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      publishedTime: post.date,
-      authors: [post.author],
-      images: post.image ? [post.image] : [],
-    },
-  };
-}
-
-export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
-  if (!post) {
-    notFound();
-  }
-
-  // Lista de imágenes slider
+  // Lista de imágenes con IDs únicos (17 imágenes)
+  // 🔴 IMPORTANTE: Actualiza esta lista si eliminas o agregas imágenes
   const sliderImages = [
-    "/images/slider/slider (1).jpg",
-    "/images/slider/slider (2).jpg",
-    "/images/slider/slider (3).jpg",
-    "/images/slider/slider (4).jpg",
-    "/images/slider/slider (5).jpeg",
-    "/images/slider/slider (6).jpg",
-    "/images/slider/slider (7).jpg",
-    "/images/slider/slider (8).jpeg",
-    "/images/slider/slider (9).jpg",
-    "/images/slider/slider (10).jpeg",
-    "/images/slider/slider (11).jpeg",
-    "/images/slider/slider (12).jpeg",
-    "/images/slider/slider (13).jpeg",
-    "/images/slider/slider (14).jpeg",
-    "/images/slider/slider (15).jpeg",
-    "/images/slider/slider (16).jpeg",
-    "/images/slider/slider (17).jpeg",
-    "/images/slider/slider (18).jpeg",
+    { id: 1, path: "/images/slider/slider (1).jpg" },
+    { id: 2, path: "/images/slider/slider (2).jpg" },
+    { id: 3, path: "/images/slider/slider (3).jpg" },
+    { id: 4, path: "/images/slider/slider (4).jpg" },
+    { id: 5, path: "/images/slider/slider (5).jpeg" },
+    { id: 6, path: "/images/slider/slider (6).jpg" },
+    { id: 7, path: "/images/slider/slider (7).jpg" },
+    { id: 8, path: "/images/slider/slider (8).jpeg" },
+    { id: 9, path: "/images/slider/slider (9).jpg" },
+    { id: 10, path: "/images/slider/slider (10).jpeg" },
+    { id: 11, path: "/images/slider/slider (11).jpeg" },
+    { id: 12, path: "/images/slider/slider (12).jpeg" },
+    { id: 13, path: "/images/slider/slider (13).jpeg" },
+    { id: 14, path: "/images/slider/slider (14).jpeg" },
+    { id: 15, path: "/images/slider/slider (15).jpeg" },
+    { id: 16, path: "/images/slider/slider (16).jpeg" },
+    { id: 17, path: "/images/slider/slider (17).jpeg" },
+    // ⚠️ Eliminada: slider (18).jpeg
   ];
-  // Selecciona una imagen aleatoria si no hay post.image
-  const randomSliderImage =
-    sliderImages[Math.floor(Math.random() * sliderImages.length)];
-  const featuredImage = post.image || randomSliderImage;
 
-  const relatedPosts = await getRelatedPosts(slug);
+  // Crear un mapa de slug → imagen asignada de forma consistente
+  const postImageMap = new Map<string, string>();
+  const usedImageIds = new Set<number>();
+
+  // Función simple para convertir slug a un número entre 0-16 (17 imágenes)
+  function slugToImageId(slug: string): number {
+    let sum = 0;
+    for (let i = 0; i < slug.length; i++) {
+      sum += slug.charCodeAt(i);
+    }
+    return sum % sliderImages.length; // Ahora módulo 17
+  }
+
+  // Primera pasada: asignar imágenes a posts
+  posts.forEach((post) => {
+    if (post.image) {
+      // Si el post ya tiene imagen, usarla
+      postImageMap.set(post.slug, post.image);
+    } else {
+      // Calcular ID de imagen basado en el slug
+      let imageId = slugToImageId(post.slug);
+      let attempts = 0;
+
+      // Si la imagen ya está usada, buscar la siguiente disponible
+      while (usedImageIds.has(imageId) && attempts < sliderImages.length) {
+        imageId = (imageId + 1) % sliderImages.length;
+        attempts++;
+      }
+
+      usedImageIds.add(imageId);
+      postImageMap.set(post.slug, sliderImages[imageId].path);
+    }
+  });
+
+  // Asignar imágenes a los posts filtrados
+  const postsWithImages = filteredPosts.map((post) => ({
+    ...post,
+    displayImage: postImageMap.get(post.slug) || sliderImages[0].path,
+  }));
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
 
       {/* Hero Section */}
-      <article className="pt-32 pb-12">
-        <div className="container mx-auto max-w-4xl px-6 md:px-12">
-          {/* Back Button */}
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Volver al blog
-          </Link>
-
-          {/* Tags */}
-          {post.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium"
-                >
-                  <Tag className="h-3 w-3" />
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            {post.title}
+      <section className="pt-32 pb-16 px-6 md:px-12 lg:px-16 xl:px-20 bg-gradient-to-b from-background to-card/30">
+        <div className="container mx-auto max-w-7xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-center">
+            Blog de Bachata
           </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground text-center max-w-3xl mx-auto">
+            Consejos, tutoriales y eventos para amantes de la bachata y salsa en
+            Málaga
+          </p>
 
-          {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-8">
-            <span className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              {new Date(post.date).toLocaleDateString("es-ES", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </span>
-            <span className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              {post.readingTime} de lectura
-            </span>
-            <span>Por {post.author}</span>
-          </div>
-
-          {/* Featured Image */}
-          <div className="relative aspect-video rounded-xl overflow-hidden mb-12 bg-muted">
-            <Image
-              src={featuredImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Share Button */}
-          <div className="mb-8 flex justify-end">
-            <ShareButton title={post.title} excerpt={post.excerpt} />
-          </div>
-
-          {/* Content */}
-          <div
-            className="prose prose-lg dark:prose-invert max-w-none
-              prose-p:mb-6 prose-p:leading-relaxed
-              prose-ul:my-6 prose-ul:space-y-3
-              prose-ol:my-6 prose-ol:space-y-3
-              prose-li:my-2
-              prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:mt-8 prose-h3:mb-4"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          {/* Author Bio */}
-          <div className="mt-16 pt-8 border-t border-border">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                <Image
-                  src="/logo/logo-trans.png"
-                  alt={post.author}
-                  width={64}
-                  height={64}
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Sobre {post.author}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Instructor profesional de bachata y salsa en Málaga. Con más
-                  de 10 años de experiencia, Carlos se dedica a compartir su
-                  pasión por el baile latino a través de clases al aire libre y
-                  eventos sociales.
-                </p>
-                <div className="mt-4 flex gap-4">
-                  <Link
-                    href="mailto:bachataalairelibrelibre@gmail.com"
-                    className="text-sm text-primary hover:underline"
-                  >
-                    Contactar
-                  </Link>
-                  <Link
-                    href="/#pricing"
-                    className="text-sm text-primary hover:underline"
-                  >
-                    Ver clases
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      {/* Related Posts */}
-      {relatedPosts.length > 0 && (
-        <section className="py-16 bg-card/30">
-          <div className="container mx-auto max-w-7xl px-6 md:px-12">
-            <h2 className="text-3xl font-bold mb-8">Artículos Relacionados</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {relatedPosts.map((relatedPost) => (
+          {/* Tags Filter */}
+          {tags.length > 0 && (
+            <div className="mt-8 flex flex-wrap gap-2 justify-center">
+              <Link
+                href="/blog"
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                  activeTag === ""
+                    ? "bg-primary text-primary-foreground border-primary shadow"
+                    : "bg-card border-border text-foreground hover:bg-primary/10 hover:border-primary"
+                }`}
+                style={{ minWidth: 90, textAlign: "center" }}
+              >
+                Todos
+              </Link>
+              {tags.map((tag) => (
                 <Link
-                  key={relatedPost.slug}
-                  href={`/blog/${relatedPost.slug}`}
-                  className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all"
+                  key={tag}
+                  href={`/blog?tag=${encodeURIComponent(tag.toLowerCase())}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
+                    activeTag.toLowerCase() === tag.toLowerCase()
+                      ? "bg-primary text-primary-foreground border-primary shadow"
+                      : "bg-card border-border text-foreground hover:bg-primary/10 hover:border-primary"
+                  }`}
+                  style={{ minWidth: 90, textAlign: "center" }}
                 >
-                  <div className="relative aspect-video overflow-hidden bg-muted">
-                    <Image
-                      src={
-                        relatedPost.image ||
-                        sliderImages[
-                          Math.floor(Math.random() * sliderImages.length)
-                        ]
-                      }
-                      alt={relatedPost.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {relatedPost.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
-                    <div className="mt-3 text-xs text-muted-foreground">
-                      {relatedPost.readingTime}
-                    </div>
-                  </div>
+                  {tag}
                 </Link>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-primary/5 to-transparent">
-        <div className="container mx-auto max-w-4xl px-6 md:px-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            ¿Listo para Aprender Bachata?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Únete a nuestras clases al aire libre en Málaga
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              href="/#pricing"
-              className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-            >
-              Ver Precios
-            </Link>
-            <Link
-              href="tel:+34698501676"
-              className="px-8 py-3 bg-card border border-border rounded-lg font-semibold hover:bg-primary/10 transition-colors"
-            >
-              Contactar
-            </Link>
-          </div>
+          )}
         </div>
       </section>
+
+      {/* Posts Grid */}
+      <main className="flex-1 px-6 md:px-12 lg:px-16 xl:px-20 py-12">
+        <div className="container mx-auto max-w-7xl">
+          {postsWithImages.length === 0 ? (
+            <div className="text-center py-20">
+              <h2 className="text-2xl font-bold mb-4">
+                {activeTag
+                  ? `No hay artículos con el tag "${activeTag}"`
+                  : "Aún no hay artículos"}
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                {activeTag
+                  ? "Intenta con otro tag o"
+                  : "Vuelve pronto para leer nuestro contenido"}
+              </p>
+              {activeTag && (
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Ver todos los artículos
+                </Link>
+              )}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {postsWithImages.map((post) => (
+                <article
+                  key={post.slug}
+                  className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
+                >
+                  <Link href={`/blog/${post.slug}`}>
+                    {/* Imagen única asignada */}
+                    <div className="w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
+                      <Image
+                        src={post.displayImage}
+                        alt={post.title}
+                        width={400}
+                        height={160}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                      {/* Tags */}
+                      {post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          {post.tags.slice(0, 3).map((tag: string) => (
+                            <span
+                              key={tag}
+                              className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium"
+                            >
+                              <Tag className="h-3 w-3" />
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Title */}
+                      <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </h2>
+
+                      {/* Excerpt */}
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+
+                      {/* Meta Info */}
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
+                          {new Date(post.date).toLocaleDateString("es-ES", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {post.readingTime}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </main>
 
       <Footer />
     </div>
