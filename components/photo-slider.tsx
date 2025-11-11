@@ -145,14 +145,6 @@ export function PhotoSlider() {
       },
       alt_description: "Group dancing",
     },
-    {
-      id: "17",
-      urls: {
-        regular: "/images/slider/optimized/slider(17).webp",
-        small: "/images/slider/optimized/slider(17).webp",
-      },
-      alt_description: "Bachata al aire libre",
-    },
   ]);
 
   useEffect(() => {
@@ -173,7 +165,7 @@ export function PhotoSlider() {
         </h2>
 
         <div className="relative mx-auto max-w-6xl">
-          {/* Main Slider */}
+              {/* Main Slider con flechas laterales */}
           <div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
             {photos.map((photo, index) => (
               <div
@@ -189,10 +181,25 @@ export function PhotoSlider() {
                 />
               </div>
             ))}
+                {/* Flechas de navegación, visibles siempre */}
+                <button
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-2 shadow-lg z-10"
+                  onClick={() => setCurrentIndex((currentIndex - 1 + photos.length) % photos.length)}
+                  aria-label="Anterior"
+                >
+                  <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary rounded-full p-2 shadow-lg z-10"
+                  onClick={() => setCurrentIndex((currentIndex + 1) % photos.length)}
+                  aria-label="Siguiente"
+                >
+                  <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
           </div>
 
           {/* Thumbnails */}
-          <div className="mt-6 grid grid-cols-3 gap-4 md:grid-cols-6">
+              <div className="mt-6 grid grid-cols-3 gap-4 md:grid-cols-6 hidden md:grid">
             {photos.map((photo, index) => (
               <Card
                 key={photo.id}
@@ -210,21 +217,7 @@ export function PhotoSlider() {
             ))}
           </div>
 
-          {/* Navigation Dots */}
-          <div className="mt-6 flex justify-center gap-2">
-            {photos.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-3 w-3 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "bg-primary w-8"
-                    : "bg-primary/30 hover:bg-primary/50"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+              {/* Navigation Dots removed */}
         </div>
       </div>
     </section>
