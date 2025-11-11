@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div>
                 <h3 className="font-bold text-lg mb-2">Sobre {post.author}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Instructor profesional de bachata y salsa en Málaga. Con más
+                  Instructor experimentado de bachata y salsa en Málaga. Con más
                   de 10 años de experiencia, Carlos se dedica a compartir su
                   pasión por el baile latino a través de clases al aire libre y
                   eventos sociales.
