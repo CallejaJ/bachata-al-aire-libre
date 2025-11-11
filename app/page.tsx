@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
-import GMaps from "@/components/gmaps";
+import GMapsWrapper from "@/components/gmaps-wrapper";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <FAQ />
-      <GMaps height={450} />
+  <GMapsWrapper height={450} />
       <Footer />
     </main>
   );
