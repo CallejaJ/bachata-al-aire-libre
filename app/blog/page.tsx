@@ -164,11 +164,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       <Image
                         src={
                           post.image ||
-                          shuffledImages[idx % shuffledImages.length]
+                          `/images/slider/optimized/desktop-slider(${
+                            (idx % 16) + 1
+                          }).webp`
                         }
                         alt={post.title}
                         width={400}
                         height={160}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
