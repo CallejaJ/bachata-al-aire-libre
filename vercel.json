@@ -9,17 +9,6 @@
       "source": "/index.php",
       "destination": "/",
       "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.bachataalairelibre.com"
-        }
-      ],
-      "destination": "https://bachataalairelibre.com/:path*",
-      "permanent": true
     }
   ],
   "headers": [
