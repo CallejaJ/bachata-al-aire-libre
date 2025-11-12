@@ -1,3 +1,47 @@
+![Lighthouse Audit: Rendimiento 99, Accesibilidad 100, Prácticas recomendadas 96, SEO 100](./assets/lighthouse-test20251112.png)
+
+# Bachata al Aire Libre 💃🕺
+
+## 🚦 Lighthouse Performance & SEO
+
+Este proyecto ha sido optimizado para obtener puntuaciones máximas en Lighthouse:
+
+- **Rendimiento:** 99
+- **Accesibilidad:** 100
+- **Prácticas recomendadas:** 96
+- **SEO:** 100
+
+### ¿Qué hemos hecho para lograrlo?
+
+#### 🔥 Rendimiento
+
+- Imágenes y vídeos optimizados con formatos modernos (WebP, MP4)
+- Carga diferida (lazy loading) de recursos pesados
+- Uso de Next.js App Router y server components para SSR y SSG
+- Minimización de JavaScript y CSS
+- Uso de Tailwind CSS para estilos eficientes
+- PWA manifest y precarga de recursos críticos
+
+#### 🌍 SEO & Geo-localización
+
+- Meta tags completos: title, description, OpenGraph, Twitter Card
+- Etiquetas geo-location (`geo.region`, `geo.placename`, `geo.position`)
+- Sitemap y robots.txt generados dinámicamente
+- Schema.org LocalBusiness markup para mejorar resultados en Google
+- URLs amigables y estructura semántica
+- Etiquetas `lang` y atributos ARIA para accesibilidad
+
+#### 📍 Internacionalización
+
+- Soporte para español e inglés
+- Meta tags y contenido adaptados por idioma
+
+#### 🏆 Resultado
+
+¡Tu landing page está lista para posicionar y cargar rápido en cualquier dispositivo!
+
+## 🌟 Features
+
 # Bachata al Aire Libre 💃🕺
 
 A modern, responsive landing page for bachata dance classes in Málaga, Spain. Built with Next.js 14, TypeScript, and Tailwind CSS.
