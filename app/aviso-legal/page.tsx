@@ -3,7 +3,7 @@
 import type React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { useLanguage } from "@/components/language-provider";
+import { useLanguage } from "@/components/LanguageProvider";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronDown } from "lucide-react";
