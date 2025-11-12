@@ -43,31 +43,31 @@ export function Tableau() {
     // Nuevas imágenes añadidas
     {
       id: "5",
-      src: "/images/tableau/bachatamalaga5.jpg",
+      src: "/images/tableau/bachatamalaga5.png",
       alt: "Bachata Málaga 5",
       rotation: -2,
     },
     {
       id: "6",
-      src: "/images/tableau/bachatamalaga6.jpg",
+      src: "/images/tableau/bachatamalaga6.png",
       alt: "Bachata Málaga 6",
       rotation: 2,
     },
     {
       id: "7",
-      src: "/images/tableau/bachatamalaga7.jpg",
+      src: "/images/tableau/bachatamalaga7.png",
       alt: "Bachata Málaga 7",
       rotation: -3,
     },
     {
       id: "8",
-      src: "/images/tableau/bachatamalaga8.jpg",
+      src: "/images/tableau/bachatamalaga8.png",
       alt: "Bachata Málaga 8",
       rotation: 3,
     },
     {
       id: "9",
-      src: "/images/tableau/bachatamalaga9.jpg",
+      src: "/images/tableau/bachatamalaga9.png",
       alt: "Bachata Málaga 9",
       rotation: 0,
     },
