@@ -90,15 +90,37 @@ export function Tableau() {
       alt: "Bachata Málaga 12",
       rotation: 1,
     },
-    // Espacios vacíos para el resto
-    ...Array(0)
-      .fill(null)
-      .map((_, i) => ({
-        id: `${i + 13}`,
-        src: "",
-        alt: "",
-        rotation: 0,
-      })),
+    // Nuevas imágenes 13-17 añadidas
+    {
+      id: "13",
+      src: "/images/tableau/bachatamalaga13.png",
+      alt: "Bachata Málaga 13",
+      rotation: -2,
+    },
+    {
+      id: "14",
+      src: "/images/tableau/bachatamalaga14.png",
+      alt: "Bachata Málaga 14",
+      rotation: 3,
+    },
+    {
+      id: "15",
+      src: "/images/tableau/bachatamalaga15.png",
+      alt: "Bachata Málaga 15",
+      rotation: -1,
+    },
+    {
+      id: "16",
+      src: "/images/tableau/bachatamalaga16.png",
+      alt: "Bachata Málaga 16",
+      rotation: 2,
+    },
+    {
+      id: "17",
+      src: "/images/tableau/bachatamalaga17.png",
+      alt: "Bachata Málaga 17",
+      rotation: -3,
+    },
   ];
 
   return (
