@@ -72,12 +72,6 @@ export function Benefits() {
           ))}
         </div>
 
-        {/* Bottom message */}
-        <div className="mt-16 text-center">
-          <p className="text-lg md:text-xl text-foreground font-medium max-w-3xl mx-auto">
-            {t.benefits.footer}
-          </p>
-        </div>
       </div>
     </section>
   )
