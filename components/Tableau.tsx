@@ -121,6 +121,18 @@ export function Tableau() {
       alt: "Bachata Málaga 17",
       rotation: -3,
     },
+    {
+      id: "18",
+      src: "/images/tableau/bachatamalaga18.png",
+      alt: "Bachata Málaga 18",
+      rotation: 2,
+    },
+    {
+      id: "19",
+      src: "/images/tableau/bachatamalaga19.png",
+      alt: "Bachata Málaga 19",
+      rotation: -1,
+    },
   ];
 
   return (
