@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { Pricing } from "@/components/Pricing";
+import { Comunidad } from "@/components/Comunidad";
 import { Testimonials } from "@/components/Testimonials";
 import GMapsWrapper from "@/components/GMapsWrapper";
 import { FAQ } from "@/components/Faq";
@@ -20,6 +21,7 @@ export default function Home() {
       <HowItWorks />
       <Benefits />
       <Pricing />
+      <Comunidad />
       <Testimonials />
       <FAQ />
       <GMapsWrapper height={450} />

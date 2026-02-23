@@ -91,6 +91,15 @@ interface Translations {
     onlySpanish: string;
     index: string;
   };
+  comunidad: {
+    title: string;
+    subtitle: string;
+    members: string;
+    approval: string;
+    rules: string;
+    cta: string;
+    scan: string;
+  };
 }
 
 const translations: Record<Language, Translations> = {
@@ -241,6 +250,15 @@ const translations: Record<Language, Translations> = {
       lastUpdate: "Last update",
       onlySpanish: "Legal content is only available in Spanish",
       index: "Index",
+    },
+    comunidad: {
+      title: "Community",
+      subtitle: "Join our WhatsApp group with over 300 active members. Stay informed about classes, events and special sessions in Málaga.",
+      members: "+300 active members",
+      approval: "Admin approval required",
+      rules: "Moderated community",
+      cta: "Join the group",
+      scan: "Scan with your mobile to join",
     },
   },
   de: {
@@ -393,6 +411,15 @@ const translations: Record<Language, Translations> = {
       onlySpanish: "Rechtliche Inhalte sind nur auf Spanisch verfügbar",
       index: "Index",
     },
+    comunidad: {
+      title: "Community",
+      subtitle: "Tritt unserer WhatsApp-Gruppe mit über 300 aktiven Mitgliedern bei. Bleibe über Kurse, Events und besondere Veranstaltungen in Málaga informiert.",
+      members: "+300 aktive Mitglieder",
+      approval: "Admin-Genehmigung erforderlich",
+      rules: "Moderierte Community",
+      cta: "Gruppe beitreten",
+      scan: "Mit dem Handy scannen, um beizutreten",
+    },
   },
   fr: {
     hero: {
@@ -544,6 +571,15 @@ const translations: Record<Language, Translations> = {
       onlySpanish: "Le contenu juridique n'est disponible qu'en espagnol",
       index: "Index",
     },
+    comunidad: {
+      title: "Communauté",
+      subtitle: "Rejoignez notre groupe WhatsApp avec plus de 300 membres actifs. Restez informé des cours, événements et sessions spéciales à Málaga.",
+      members: "+300 membres actifs",
+      approval: "Approbation de l'admin requise",
+      rules: "Communauté modérée",
+      cta: "Rejoindre le groupe",
+      scan: "Scannez avec votre téléphone pour rejoindre",
+    },
   },
   es: {
     hero: {
@@ -694,6 +730,15 @@ const translations: Record<Language, Translations> = {
       lastUpdate: "Última actualización",
       onlySpanish: "El contenido legal solo está disponible en español",
       index: "Índice",
+    },
+    comunidad: {
+      title: "Comunidad",
+      subtitle: "Únete a nuestro grupo de WhatsApp con más de 300 miembros activos. Entérate de clases, eventos y sesiones especiales en Málaga.",
+      members: "+300 miembros activos",
+      approval: "Acceso aprobado por admin",
+      rules: "Comunidad moderada",
+      cta: "Unirme al grupo",
+      scan: "Escanea con tu móvil para unirte",
     },
   },
 };
