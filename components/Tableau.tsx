@@ -133,6 +133,12 @@ export function Tableau() {
       alt: "Bachata Málaga 19",
       rotation: -1,
     },
+    {
+      id: "20",
+      src: "/images/tableau/bachatamalaga20.png",
+      alt: "Bachata Málaga 20",
+      rotation: 3,
+    },
   ];
 
   return (
