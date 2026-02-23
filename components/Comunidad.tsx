@@ -37,7 +37,7 @@ export function Comunidad() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Left — QR */}
             <div className="flex flex-col items-center justify-center gap-4 p-10 bg-white dark:bg-zinc-900">
-              <div className="p-4 bg-white rounded-2xl shadow-md">
+              <div className="p-4 bg-white rounded-2xl border-t-4 shadow-[0_8px_30px_rgba(0,0,0,0.55)]">
                 <QRCode
                   value={WHATSAPP_GROUP_URL}
                   size={180}
