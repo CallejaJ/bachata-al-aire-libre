@@ -24,27 +24,79 @@ export const metadata: Metadata = {
   },
 };
 
+const blogUI = {
+  es: {
+    title: "Blog de Bachata",
+    subtitle: "Consejos, tutoriales y eventos para amantes de la bachata y salsa en Málaga",
+    all: "Todos",
+    noPostsTag: (tag: string) => `No hay artículos con el tag "${tag}"`,
+    noPosts: "Aún no hay artículos",
+    tryOtherTag: "Intenta con otro tag o",
+    comingSoon: "Vuelve pronto para leer nuestro contenido",
+    seeAll: "Ver todos los artículos",
+    dateLocale: "es-ES",
+  },
+  en: {
+    title: "Bachata Blog",
+    subtitle: "Tips, tutorials and events for bachata and salsa lovers in Málaga",
+    all: "All",
+    noPostsTag: (tag: string) => `No articles found for tag "${tag}"`,
+    noPosts: "No articles yet",
+    tryOtherTag: "Try another tag or",
+    comingSoon: "Check back soon for our content",
+    seeAll: "See all articles",
+    dateLocale: "en-US",
+  },
+  de: {
+    title: "Bachata Blog",
+    subtitle: "Tipps, Tutorials und Events für Bachata- und Salsa-Liebhaber in Málaga",
+    all: "Alle",
+    noPostsTag: (tag: string) => `Keine Artikel mit dem Tag „${tag}"`,
+    noPosts: "Noch keine Artikel",
+    tryOtherTag: "Versuche einen anderen Tag oder",
+    comingSoon: "Schau bald wieder vorbei",
+    seeAll: "Alle Artikel anzeigen",
+    dateLocale: "de-DE",
+  },
+  fr: {
+    title: "Blog Bachata",
+    subtitle: "Conseils, tutoriels et événements pour les amateurs de bachata et salsa à Málaga",
+    all: "Tous",
+    noPostsTag: (tag: string) => `Aucun article avec le tag « ${tag} »`,
+    noPosts: "Pas encore d'articles",
+    tryOtherTag: "Essayez un autre tag ou",
+    comingSoon: "Revenez bientôt pour notre contenu",
+    seeAll: "Voir tous les articles",
+    dateLocale: "fr-FR",
+  },
+} as const;
+
+type SupportedLang = keyof typeof blogUI;
+
 interface BlogPageProps {
-  searchParams: Promise<{ tag?: string }>;
+  searchParams: Promise<{ tag?: string; lang?: string }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const posts = await getAllPosts();
-  const tags = await getAllTags();
-
-  // Obtener el tag activo desde searchParams
   const params = await searchParams;
+  const lang = (params.lang as SupportedLang) ?? "es";
+  const ui = blogUI[lang] ?? blogUI.es;
+
+  const posts = await getAllPosts(lang);
+  const tags = await getAllTags(lang);
+
   const activeTag = params.tag || "";
 
-  // Filtrar posts por tag activo (case-insensitive)
   const filteredPosts = activeTag
     ? posts.filter((post) =>
         post.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase())
       )
     : posts;
 
-  // Always use the main logo as the featured image for posts
   const featuredImage = "/logo/logo-trans.png";
+
+  const langParam = lang !== "es" ? `?lang=${lang}` : "";
+  const tagPrefix = lang !== "es" ? `?lang=${lang}&tag=` : `?tag=`;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -54,18 +106,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       <section className="pt-32 pb-16 px-6 md:px-12 lg:px-16 xl:px-20 bg-gradient-to-b from-background to-card/30">
         <div className="container mx-auto max-w-7xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-center">
-            Blog de Bachata
+            {ui.title}
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground text-center max-w-3xl mx-auto">
-            Consejos, tutoriales y eventos para amantes de la bachata y salsa en
-            Málaga
+            {ui.subtitle}
           </p>
 
           {/* Tags Filter */}
           {tags.length > 0 && (
             <div className="mt-8 flex flex-wrap gap-2 justify-center">
               <Link
-                href="/blog"
+                href={`/blog${langParam}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
                   activeTag === ""
                     ? "bg-primary text-primary-foreground border-primary shadow"
@@ -73,12 +124,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 }`}
                 style={{ minWidth: 90, textAlign: "center" }}
               >
-                Todos
+                {ui.all}
               </Link>
               {tags.map((tag) => (
                 <Link
                   key={tag}
-                  href={`/blog?tag=${encodeURIComponent(tag.toLowerCase())}`}
+                  href={`/blog${tagPrefix}${encodeURIComponent(tag.toLowerCase())}`}
                   className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
                     activeTag.toLowerCase() === tag.toLowerCase()
                       ? "bg-primary text-primary-foreground border-primary shadow"
@@ -100,21 +151,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
               <h2 className="text-2xl font-bold mb-4">
-                {activeTag
-                  ? `No hay artículos con el tag "${activeTag}"`
-                  : "Aún no hay artículos"}
+                {activeTag ? ui.noPostsTag(activeTag) : ui.noPosts}
               </h2>
               <p className="text-muted-foreground mb-6">
-                {activeTag
-                  ? "Intenta con otro tag o"
-                  : "Vuelve pronto para leer nuestro contenido"}
+                {activeTag ? ui.tryOtherTag : ui.comingSoon}
               </p>
               {activeTag && (
                 <Link
-                  href="/blog"
+                  href={`/blog${langParam}`}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                 >
-                  Ver todos los artículos
+                  {ui.seeAll}
                 </Link>
               )}
             </div>
@@ -125,7 +172,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   key={post.slug}
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/blog/${post.slug}${langParam}`}>
                     {/* Logo con filtro azul */}
                     <div className="relative w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
                       <Image
@@ -168,7 +215,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       <div className="flex items-center gap-4 text-xs text-muted-foreground">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
-                          {new Date(post.date).toLocaleDateString("es-ES", {
+                          {new Date(post.date).toLocaleDateString(ui.dateLocale, {
                             year: "numeric",
                             month: "short",
                             day: "numeric",

@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "content/blog");
+const blogRoot = path.join(process.cwd(), "content/blog");
 
 export interface BlogPost {
   slug: string;
@@ -37,8 +37,15 @@ function calculateReadingTime(text: string): string {
   return `${minutes} min`;
 }
 
-export async function getAllPosts(): Promise<BlogPostMetadata[]> {
-  // Verificar si existe el directorio
+function getPostsDirectory(lang: string): string {
+  const dir = path.join(blogRoot, lang);
+  // Fallback to Spanish if lang directory doesn't exist
+  return fs.existsSync(dir) ? dir : path.join(blogRoot, "es");
+}
+
+export async function getAllPosts(lang = "es"): Promise<BlogPostMetadata[]> {
+  const postsDirectory = getPostsDirectory(lang);
+
   if (!fs.existsSync(postsDirectory)) {
     return [];
   }
@@ -73,8 +80,12 @@ export async function getAllPosts(): Promise<BlogPostMetadata[]> {
   });
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+export async function getPostBySlug(
+  slug: string,
+  lang = "es"
+): Promise<BlogPost | null> {
   try {
+    const postsDirectory = getPostsDirectory(lang);
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
@@ -95,20 +106,23 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       readingTime: calculateReadingTime(content),
     };
   } catch (error) {
-    console.error(`Error loading post ${slug}:`, error);
+    console.error(`Error loading post ${slug} (${lang}):`, error);
     return null;
   }
 }
 
-export async function getPostsByTag(tag: string): Promise<BlogPostMetadata[]> {
-  const allPosts = await getAllPosts();
+export async function getPostsByTag(
+  tag: string,
+  lang = "es"
+): Promise<BlogPostMetadata[]> {
+  const allPosts = await getAllPosts(lang);
   return allPosts.filter((post) =>
     post.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
   );
 }
 
-export async function getAllTags(): Promise<string[]> {
-  const allPosts = await getAllPosts();
+export async function getAllTags(lang = "es"): Promise<string[]> {
+  const allPosts = await getAllPosts(lang);
   const tagsSet = new Set<string>();
 
   allPosts.forEach((post) => {
@@ -120,12 +134,13 @@ export async function getAllTags(): Promise<string[]> {
 
 export async function getRelatedPosts(
   currentSlug: string,
+  lang = "es",
   limit = 3
 ): Promise<BlogPostMetadata[]> {
-  const currentPost = await getPostBySlug(currentSlug);
+  const currentPost = await getPostBySlug(currentSlug, lang);
   if (!currentPost) return [];
 
-  const allPosts = await getAllPosts();
+  const allPosts = await getAllPosts(lang);
 
   // Filtrar el post actual
   const otherPosts = allPosts.filter((post) => post.slug !== currentSlug);

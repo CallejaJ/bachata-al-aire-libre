@@ -162,6 +162,10 @@ export function Header() {
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     setLanguage(lang as any);
+                    if (pathname.startsWith("/blog")) {
+                      const newUrl = lang === "es" ? pathname : `${pathname}?lang=${lang}`;
+                      router.push(newUrl);
+                    }
                   }}
                 >
                   {lang.toUpperCase()}
