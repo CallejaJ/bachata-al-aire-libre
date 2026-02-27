@@ -153,7 +153,7 @@ J'ai travaillé avec des groupes d'entreprises, des enterrements de vie de garç
 
 ---
 
-## _Votre groupe arrive à Málaga en croisière et vous souhaitez réserver un cours ? Écrivez-moi à bachataalairelibrelibre@gmail.com ou appelez-moi au +34 698 50 16 76 et nous organisons tout._
+## _Votre groupe arrive à Málaga en croisière et vous souhaitez réserver un cours ? Écrivez-moi à bachataalairelibremalaga@gmail.com ou appelez-moi au +34 698 50 16 76 et nous organisons tout._
 
 ## Continuer à explorer
 

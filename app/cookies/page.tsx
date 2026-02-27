@@ -564,10 +564,10 @@ export default function CookiesPolicyPage() {
                       <li>
                         <strong>Email:</strong>{" "}
                         <a
-                          href="mailto:bachataalairelibrelibre@gmail.com"
+                          href="mailto:bachataalairelibremalaga@gmail.com"
                           className="text-primary hover:underline break-all"
                         >
-                          bachataalairelibrelibre@gmail.com
+                          bachataalairelibremalaga@gmail.com
                         </a>
                       </li>
                       <li>

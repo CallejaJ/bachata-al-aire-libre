@@ -98,7 +98,7 @@ Wenn du in Málaga lebst oder zu Besuch bist, lade ich dich ein, unseren Bachata
 
 ---
 
-## _Bist du in Málaga und möchtest lernen, Bachata im Freien zu tanzen? Kontaktiere mich: bachataalairelibrelibre@gmail.com oder +34 698 50 16 76_
+## _Bist du in Málaga und möchtest lernen, Bachata im Freien zu tanzen? Kontaktiere mich: bachataalairelibremalaga@gmail.com oder +34 698 50 16 76_
 
 ## Weiteres entdecken
 

@@ -431,7 +431,7 @@ See you on the floor! 💃🕺
 
 ---
 
-## _Over 40 and want to try bachata in Málaga? Get in touch: bachataalairelibrelibre@gmail.com or +34 698 50 16 76_
+## _Over 40 and want to try bachata in Málaga? Get in touch: bachataalairelibremalaga@gmail.com or +34 698 50 16 76_
 
 ## Keep exploring
 

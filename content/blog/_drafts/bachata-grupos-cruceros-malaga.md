@@ -153,7 +153,7 @@ He trabajado con grupos de empresas, despedidas de soltero/a, grupos de amigos, 
 
 ---
 
-## _¿Tu grupo llega a Málaga en crucero y quieres reservar una clase? Escríbeme a bachataalairelibrelibre@gmail.com o llámame al +34 698 50 16 76 y lo organizamos._
+## _¿Tu grupo llega a Málaga en crucero y quieres reservar una clase? Escríbeme a bachataalairelibremalaga@gmail.com o llámame al +34 698 50 16 76 y lo organizamos._
 
 ## Sigue explorando
 

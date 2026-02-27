@@ -153,7 +153,7 @@ I've worked with corporate groups, hen and stag parties, friend groups, families
 
 ---
 
-## _Is your group arriving in Málaga by cruise ship and want to book a class? Write to me at bachataalairelibrelibre@gmail.com or call me on +34 698 50 16 76 and we'll sort it out._
+## _Is your group arriving in Málaga by cruise ship and want to book a class? Write to me at bachataalairelibremalaga@gmail.com or call me on +34 698 50 16 76 and we'll sort it out._
 
 ## Keep exploring
 

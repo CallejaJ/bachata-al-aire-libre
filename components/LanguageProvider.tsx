@@ -231,7 +231,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "How can I book my bachata class in Málaga?",
           answer:
-            "You can book via WhatsApp at +34 698 50 16 76, send us an email at bachataalairelibrelibre@gmail.com, or contact us through Instagram @bachataalairelibre. We'll respond quickly to confirm your spot!",
+            "You can book via WhatsApp at +34 698 50 16 76, send us an email at bachataalairelibremalaga@gmail.com, or contact us through Instagram @bachataalairelibre. We'll respond quickly to confirm your spot!",
         },
       ],
     },
@@ -391,7 +391,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "Wie kann ich meinen Bachata-Kurs in Málaga buchen?",
           answer:
-            "Sie können über WhatsApp unter +34 698 50 16 76 buchen, uns eine E-Mail an bachataalairelibrelibre@gmail.com senden oder uns über Instagram @bachataalairelibre kontaktieren. Wir werden schnell antworten, um Ihren Platz zu bestätigen!",
+            "Sie können über WhatsApp unter +34 698 50 16 76 buchen, uns eine E-Mail an bachataalairelibremalaga@gmail.com senden oder uns über Instagram @bachataalairelibre kontaktieren. Wir werden schnell antworten, um Ihren Platz zu bestätigen!",
         },
       ],
     },
@@ -551,7 +551,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "Comment puis-je réserver mon cours de bachata à Málaga ?",
           answer:
-            "Vous pouvez réserver via WhatsApp au +34 698 50 16 76, nous envoyer un email à bachataalairelibrelibre@gmail.com, ou nous contacter via Instagram @bachataalairelibre. Nous répondrons rapidement pour confirmer votre place !",
+            "Vous pouvez réserver via WhatsApp au +34 698 50 16 76, nous envoyer un email à bachataalairelibremalaga@gmail.com, ou nous contacter via Instagram @bachataalairelibre. Nous répondrons rapidement pour confirmer votre place !",
         },
       ],
     },
@@ -711,7 +711,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "¿Cómo puedo reservar mi clase de bachata en Málaga?",
           answer:
-            "Es muy fácil: contacta con nosotros por WhatsApp al +34 698 50 16 76 o envía un email a bachataalairelibrelibre@gmail.com. También puedes seguirnos en Instagram @bachataalairelibre para estar al tanto de clases especiales y eventos.",
+            "Es muy fácil: contacta con nosotros por WhatsApp al +34 698 50 16 76 o envía un email a bachataalairelibremalaga@gmail.com. También puedes seguirnos en Instagram @bachataalairelibre para estar al tanto de clases especiales y eventos.",
         },
       ],
     },

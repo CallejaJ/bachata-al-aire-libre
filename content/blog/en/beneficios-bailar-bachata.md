@@ -98,7 +98,7 @@ If you live in Málaga or are visiting, I invite you to join our outdoor bachata
 
 ---
 
-## _Are you in Málaga and want to learn to dance bachata outdoors? Get in touch: bachataalairelibrelibre@gmail.com or +34 698 50 16 76_
+## _Are you in Málaga and want to learn to dance bachata outdoors? Get in touch: bachataalairelibremalaga@gmail.com or +34 698 50 16 76_
 
 ## Keep exploring
 

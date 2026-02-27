@@ -431,7 +431,7 @@ Ich freue mich auf dich auf der Tanzfläche! 💃🕺
 
 ---
 
-## _Bist du über 40 und möchtest Bachata in Málaga ausprobieren? Kontaktiere mich: bachataalairelibrelibre@gmail.com oder +34 698 50 16 76_
+## _Bist du über 40 und möchtest Bachata in Málaga ausprobieren? Kontaktiere mich: bachataalairelibremalaga@gmail.com oder +34 698 50 16 76_
 
 ## Weiteres entdecken
 

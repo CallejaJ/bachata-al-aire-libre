@@ -123,7 +123,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({ params, searchParams }: PageProps) {
+export default async function BlogPostPage({
+  params,
+  searchParams,
+}: PageProps) {
   const { slug } = await params;
   const { lang } = await searchParams;
   const resolvedLang = (lang as SupportedLang) ?? "es";
@@ -189,7 +192,9 @@ export default async function BlogPostPage({ params, searchParams }: PageProps) 
               <Clock className="h-4 w-4" />
               {ui.readingTime(post.readingTime)}
             </span>
-            <span>{ui.by} {post.author}</span>
+            <span>
+              {ui.by} {post.author}
+            </span>
           </div>
 
           {/* Featured Image */}
@@ -241,7 +246,7 @@ export default async function BlogPostPage({ params, searchParams }: PageProps) 
                 </p>
                 <div className="mt-4 flex gap-4">
                   <Link
-                    href="mailto:bachataalairelibrelibre@gmail.com"
+                    href="mailto:bachataalairelibremalaga@gmail.com"
                     className="text-sm text-primary hover:underline"
                   >
                     {ui.contact}

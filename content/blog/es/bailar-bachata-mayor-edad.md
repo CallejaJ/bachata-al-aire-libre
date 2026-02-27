@@ -431,7 +431,7 @@ Tu yo del futuro te lo agradecerá.
 
 ---
 
-## _¿Tienes más de 40 y quieres probar bachata en Málaga? Contacta conmigo: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
+## _¿Tienes más de 40 y quieres probar bachata en Málaga? Contacta conmigo: bachataalairelibremalaga@gmail.com o +34 698 50 16 76_
 
 ## Sigue explorando
 

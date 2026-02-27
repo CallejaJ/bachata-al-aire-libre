@@ -373,7 +373,7 @@ En Málaga específicamente, con tanto turista y estudiante internacional, venir
 
 ---
 
-## _¿Estás en Malaga capital y quieres aprender a bailar bachata al aire libre? Contacta conmigo: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
+## _¿Estás en Malaga capital y quieres aprender a bailar bachata al aire libre? Contacta conmigo: bachataalairelibremalaga@gmail.com o +34 698 50 16 76_
 
 ## Sigue explorando
 

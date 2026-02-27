@@ -34,7 +34,7 @@ As a bachata teacher who has been part of the Málaga scene for years, I'm going
 
 **Price**: Very affordable, with multi-class passes available
 
-**Contact**: +34 698 50 16 76 / bachataalairelibrelibre@gmail.com
+**Contact**: +34 698 50 16 76 / bachataalairelibremalaga@gmail.com
 
 ### 2. Dance Emotion Málaga
 
@@ -304,13 +304,13 @@ See you on the floor! 💃🕺
 
 ---
 
-_Do you have a favourite place I didn't mention? Questions about any event? Write to me at bachataalairelibrelibre@gmail.com_
+_Do you have a favourite place I didn't mention? Questions about any event? Write to me at bachataalairelibremalaga@gmail.com_
 
 **P.S.**: This guide is updated regularly. Last update: November 2025
 
 ---
 
-## _Are you in Málaga and want to learn to dance bachata outdoors? Get in touch: bachataalairelibrelibre@gmail.com or +34 698 50 16 76_
+## _Are you in Málaga and want to learn to dance bachata outdoors? Get in touch: bachataalairelibremalaga@gmail.com or +34 698 50 16 76_
 
 ## Keep exploring
 

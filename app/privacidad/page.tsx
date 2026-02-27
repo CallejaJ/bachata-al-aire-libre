@@ -234,10 +234,10 @@ export default function PrivacidadPage() {
                       <li>
                         <strong>Email:</strong>{" "}
                         <a
-                          href="mailto:bachataalairelibrelibre@gmail.com"
+                          href="mailto:bachataalairelibremalaga@gmail.com"
                           className="text-primary hover:underline break-all"
                         >
-                          bachataalairelibrelibre@gmail.com
+                          bachataalairelibremalaga@gmail.com
                         </a>
                       </li>
                       <li>
@@ -462,10 +462,10 @@ export default function PrivacidadPage() {
                     <p className="mt-3">
                       Para ejercer sus derechos, puede contactarnos en{" "}
                       <a
-                        href="mailto:bachataalairelibrelibre@gmail.com"
+                        href="mailto:bachataalairelibremalaga@gmail.com"
                         className="text-primary hover:underline"
                       >
-                        bachataalairelibrelibre@gmail.com
+                        bachataalairelibremalaga@gmail.com
                       </a>
                       . También tiene derecho a presentar una reclamación ante
                       la Agencia Española de Protección de Datos (
@@ -610,10 +610,10 @@ export default function PrivacidadPage() {
                       <li>
                         <strong>Email:</strong>{" "}
                         <a
-                          href="mailto:bachataalairelibrelibre@gmail.com"
+                          href="mailto:bachataalairelibremalaga@gmail.com"
                           className="text-primary hover:underline break-all"
                         >
-                          bachataalairelibrelibre@gmail.com
+                          bachataalairelibremalaga@gmail.com
                         </a>
                       </li>
                       <li>

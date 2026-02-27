@@ -231,10 +231,10 @@ export default function AvisoLegalPage() {
                       <li>
                         <strong>Email:</strong>{" "}
                         <a
-                          href="mailto:bachataalairelibrelibre@gmail.com"
+                          href="mailto:bachataalairelibremalaga@gmail.com"
                           className="text-primary hover:underline break-all"
                         >
-                          bachataalairelibrelibre@gmail.com
+                          bachataalairelibremalaga@gmail.com
                         </a>
                       </li>
                       <li>
@@ -514,10 +514,10 @@ export default function AvisoLegalPage() {
                       <li>
                         <strong>Email:</strong>{" "}
                         <a
-                          href="mailto:bachataalairelibrelibre@gmail.com"
+                          href="mailto:bachataalairelibremalaga@gmail.com"
                           className="text-primary hover:underline break-all"
                         >
-                          bachataalairelibrelibre@gmail.com
+                          bachataalairelibremalaga@gmail.com
                         </a>
                       </li>
                       <li>

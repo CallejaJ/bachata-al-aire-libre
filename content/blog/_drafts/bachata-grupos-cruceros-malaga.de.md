@@ -153,7 +153,7 @@ Ich habe mit Unternehmensgruppen, Junggesellen-/Junggesellinnenabschieden, Freun
 
 ---
 
-## _Kommt eure Gruppe mit dem Kreuzfahrtschiff nach Málaga und möchtet ihr einen Kurs buchen? Schreibt mir an bachataalairelibrelibre@gmail.com oder ruft mich an unter +34 698 50 16 76 und wir organisieren alles._
+## _Kommt eure Gruppe mit dem Kreuzfahrtschiff nach Málaga und möchtet ihr einen Kurs buchen? Schreibt mir an bachataalairelibremalaga@gmail.com oder ruft mich an unter +34 698 50 16 76 und wir organisieren alles._
 
 ## Weiteres entdecken
 

@@ -34,7 +34,7 @@ En tant que professeur de bachata présent depuis des années sur la scène mala
 
 **Prix** : Très accessible, avec des forfaits disponibles
 
-**Contact** : +34 698 50 16 76 / bachataalairelibrelibre@gmail.com
+**Contact** : +34 698 50 16 76 / bachataalairelibremalaga@gmail.com
 
 ### 2. Dance Emotion Málaga
 
@@ -304,13 +304,13 @@ On se retrouve sur la piste ! 💃🕺
 
 ---
 
-_Vous avez un endroit favori que je n'ai pas mentionné ? Des questions sur un événement ? Écrivez-moi à bachataalairelibrelibre@gmail.com_
+_Vous avez un endroit favori que je n'ai pas mentionné ? Des questions sur un événement ? Écrivez-moi à bachataalairelibremalaga@gmail.com_
 
 **P.S.** : Ce guide est mis à jour régulièrement. Dernière mise à jour : Novembre 2025
 
 ---
 
-## _Vous êtes à Málaga et vous voulez apprendre à danser la bachata en plein air ? Contactez-moi : bachataalairelibrelibre@gmail.com ou +34 698 50 16 76_
+## _Vous êtes à Málaga et vous voulez apprendre à danser la bachata en plein air ? Contactez-moi : bachataalairelibremalaga@gmail.com ou +34 698 50 16 76_
 
 ## Continuer à explorer
 

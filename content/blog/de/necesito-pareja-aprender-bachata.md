@@ -373,7 +373,7 @@ In Málaga speziell, mit so vielen Touristen und internationalen Studenten, ist 
 
 ---
 
-## _Bist du in Málaga und möchtest lernen, Bachata im Freien zu tanzen? Kontaktiere mich: bachataalairelibrelibre@gmail.com oder +34 698 50 16 76_
+## _Bist du in Málaga und möchtest lernen, Bachata im Freien zu tanzen? Kontaktiere mich: bachataalairelibremalaga@gmail.com oder +34 698 50 16 76_
 
 ## Weiteres entdecken
 
