@@ -1,288 +1,133 @@
-# Bachata al Aire Libre 💃🕺
+# Bachata al Aire Libre
+
+<div align="center">
+    <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
+    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer" alt="Framer Motion" />
+    <img src="https://img.shields.io/badge/shadcn%2Fui-latest-000000?style=for-the-badge" alt="shadcn/ui" />
+    <img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel" alt="Vercel" />
+</div>
+
+<p align="center">
+    <i>Landing page for outdoor bachata and salsa classes in Málaga, with multilingual content, interactive media components, and a markdown blog in four languages.</i>
+</p>
 
-A modern, high-performance landing page for outdoor bachata and salsa dance classes in Málaga, Spain. Built with Next.js 14, TypeScript, and Tailwind CSS.
+## Page Sections
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://www.bachataalairelibre.com/)
-[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8)](https://tailwindcss.com/)
+The homepage is a single-page layout composed of independently managed React components, each corresponding to a discrete content section.
 
-![Lighthouse Audit: Performance 99, Accessibility 100, Best Practices 96, SEO 100](./assets/lighthouse-test20251112.png)
+| Section | Component | Purpose |
+|---|---|---|
+| **Hero** | `Hero.tsx` | Full-screen entry with headline, tagline, and primary CTA |
+| **How It Works** | `HowItWorks.tsx` | Three-step explanation of the class onboarding process |
+| **Benefits** | `Benefits.tsx` | Four highlighted advantages of attending |
+| **Pricing** | `Pricing.tsx` | Tier cards with embedded video backgrounds and WhatsApp CTAs |
+| **Community** | `Comunidad.tsx` | WhatsApp group QR code and member count display |
+| **Testimonials** | `Testimonials.tsx` | Carousel of reviews sourced from Meetup |
+| **Photo Gallery** | `Tableau.tsx` | 20-image grid from `public/images/tableau/` |
+| **FAQ** | `FAQ.tsx` | Accordion with 8 questions, fully translated |
+| **Location** | `GMapsWrapper.tsx` | Embedded Google Maps for Calle Alcazabilla, Málaga |
 
-## 🚦 Lighthouse Performance Scores
+## Blog System
 
-This project has been optimized to achieve maximum Lighthouse scores:
+The blog handles content in four languages via separate markdown file directories, parsed with **Gray Matter** for frontmatter and **Remark** for HTML conversion. Each post carries tags used for filtering and cross-linking.
 
-- **Performance:** 99
-- **Accessibility:** 100
-- **Best Practices:** 96
-- **SEO:** 100
+All blog logic lives in `lib/blog.ts`:
 
-## ✨ Key Features
+| Function | Behavior |
+|---|---|
+| `getAllPosts(lang)` | Returns all posts for a given language, sorted by date |
+| `getPostBySlug(slug, lang)` | Fetches a single post and returns its HTML body |
+| `getPostsByTag(tag, lang)` | Filters posts by a specific tag |
+| `getAllTags(lang)` | Extracts the unique tag set across all posts |
+| `getRelatedPosts(slug, lang)` | Scores posts by shared tags to surface related articles |
+| `calculateReadingTime(text)` | Estimates reading time at 200 words per minute |
 
-### 🎯 Core Functionality
+Blog routes are handled under `app/blog/page.tsx` (listing) and `app/blog/[slug]/page.tsx` (individual posts), with language passed via `?lang=` query parameter.
 
-- **Responsive Design**: Seamless experience across desktop, tablet, and mobile devices
-- **Multi-language Support**: Spanish (default) and English with easy expansion
-- **PWA Ready**: Progressive Web App capabilities with manifest and service worker support
-- **Dynamic Content**: Server-side rendering (SSR) and static site generation (SSG)
-
-### 🎨 Interactive Components
-
-- **Music Player**: Bachata tracks player with custom controls
-- **Photo Gallery**: Animated image slider with Framer Motion
-- **Video Backgrounds**: Dynamic video showcases on pricing cards
-- **Testimonials Carousel**: Real 5-star reviews from Meetup with navigation
-- **Google Maps Integration**: Interactive location display
-- **WhatsApp Widget**: Quick contact button with pre-filled messages
-- **Language Switcher**: Smooth transitions between Spanish and English
-
-### 🔍 SEO & Performance Optimization
-
-- **Schema.org Markup**: LocalBusiness structured data for rich Google results
-- **Meta Tags**: Complete OpenGraph, Twitter Card, and geo-location tags
-- **Dynamic Sitemap**: Auto-generated XML sitemap
-- **Robots.txt**: SEO-friendly crawler configuration
-- **Optimized Media**: WebP images and MP4 videos with lazy loading
-- **Edge Runtime**: Fast response times with Next.js Edge functions
-
-## 🚀 Tech Stack
-
-| Category          | Technologies                                    |
-| ----------------- | ----------------------------------------------- |
-| **Framework**     | [Next.js 14](https://nextjs.org/) (App Router)  |
-| **Language**      | [TypeScript](https://www.typescriptlang.org/)   |
-| **Styling**       | [Tailwind CSS](https://tailwindcss.com/)        |
-| **UI Components** | [shadcn/ui](https://ui.shadcn.com/)             |
-| **Animations**    | [Framer Motion](https://www.framer.com/motion/) |
-| **Icons**         | [Lucide React](https://lucide.dev/)             |
-| **Deployment**    | [Vercel](https://vercel.com/)                   |
-
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- pnpm, npm, or yarn
-
-### Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/CallejaJ/carlos-yepes-reyes.git
-cd carlos-yepes-reyes
-```
-
-2. **Install dependencies**
-
-```bash
-pnpm install
-# or
-npm install
-# or
-yarn install
-```
-
-3. **Run the development server**
-
-```bash
-pnpm dev
-# or
-npm run dev
-# or
-yarn dev
-```
-
-4. **Open your browser**
-
-Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Build for Production
-
-```bash
-pnpm build
-pnpm start
-```
-
-## 📁 Project Structure
-
-```
-carlos-yepes-reyes/
-├── app/
-│   ├── blog/                    # Blog section
-│   │   ├── [slug]/             # Individual blog posts
-│   │   └── page.tsx            # Blog listing page
-│   ├── layout.tsx              # Root layout with metadata
-│   ├── page.tsx                # Main landing page
-│   ├── manifest.ts             # PWA manifest configuration
-│   ├── robots.ts               # Robots.txt rules
-│   └── sitemap.ts              # Dynamic sitemap generation
-│
-├── components/
-│   ├── ui/                     # shadcn/ui base components
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   └── ...
-│   ├── benefits.tsx            # Benefits section
-│   ├── breadcrumbs.tsx         # Breadcrumb navigation
-│   ├── faq.tsx                 # FAQ accordion
-│   ├── footer.tsx              # Site footer
-│   ├── gmaps-wrapper.tsx       # Google Maps integration
-│   ├── header.tsx              # Navigation header
-│   ├── hero.tsx                # Hero section with CTA
-│   ├── how-it-works.tsx        # Process explanation
-│   ├── language-provider.tsx   # i18n context provider
-│   ├── language-selector.tsx   # Language switcher UI
-│   ├── music-player.tsx        # Audio player component
-│   ├── pricing.tsx             # Pricing cards with videos
-│   ├── tableau.tsx             # Photo board display
-│   ├── testimonials.tsx        # Reviews carousel
-│   ├── theme-provider.tsx      # Dark/Light theme support
-│   └── whatsapp-widget.tsx     # WhatsApp contact button
-│
-├── lib/
-│   ├── blog.ts                 # Blog utilities and data
-│   └── utils.ts                # Helper functions
-│
-├── public/
-│   ├── favicon/                # Favicon assets
-│   ├── images/                 # Image files
-│   │   ├── slider/            # Gallery images
-│   │   └── tableau/           # Photo board images
-│   ├── logo/                   # Brand logos
-│   ├── sounds/                 # Audio tracks
-│   └── videos/                 # Video backgrounds
-│
-└── styles/
-    └── globals.css             # Global styles and Tailwind
-```
-
-## 🎯 Feature Details
-
-### Pricing Section
-
-- **Video Backgrounds**: Each pricing tier features dynamic video content
-- **WhatsApp Integration**: Direct contact with pre-filled messages per plan
-- **Responsive Cards**: Glassmorphism effects with smooth animations
-- **Call-to-Action**: Clear buttons for trial and subscription options
-
-### Testimonials
-
-- **Authentic Reviews**: Real 5-star feedback from Meetup platform
-- **Carousel Navigation**: Smooth transitions between testimonials
-- **Tag System**: Categorized feedback for easy browsing
-- **External Link**: Direct connection to full reviews page
-
-### Blog System
-
-- **Dynamic Routes**: Auto-generated pages for each post
-- **Tag Filtering**: Category-based article discovery
-- **SEO Optimized**: Individual meta tags per article
-- **Reading Time**: Estimated time for each post
-- **Related Posts**: Smart suggestions based on tags
-
-### Performance Optimizations
-
-- **Image Optimization**: Next.js Image component with WebP format
-- **Code Splitting**: Automatic route-based code splitting
-- **Lazy Loading**: Resources loaded on-demand
-- **Edge Caching**: Static assets served from CDN
-- **Minimal JavaScript**: Only essential client-side code
-
-## 🌍 SEO Implementation
-
-### What we've implemented:
-
-#### Meta Tags
-
-- Title and description for all pages
-- OpenGraph tags for social media sharing
-- Twitter Card markup
-- Geo-location tags (Málaga, Spain)
-- Canonical URLs
-
-#### Structured Data
-
-```json
-{
-  "@type": "LocalBusiness",
-  "name": "Bachata al Aire Libre",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Málaga",
-    "addressCountry": "ES"
-  }
-}
-```
-
-#### Technical SEO
-
-- XML Sitemap at `/sitemap.xml`
-- Robots.txt configuration
-- Semantic HTML5 structure
-- ARIA labels for accessibility
-- Mobile-friendly viewport
-
-## 🌐 Internationalization
-
-Currently supporting:
-
-- 🇪🇸 Spanish (default)
-- 🇬🇧 English
-
-Easy to extend with additional languages through the `language-provider.tsx` system.
-
-## 🚀 Deployment
-
-This project is optimized for deployment on [Vercel](https://vercel.com/):
-
-1. **Push to GitHub**
-
-```bash
-git push origin main
-```
-
-2. **Import to Vercel**
-
-   - Connect your GitHub repository
-   - Vercel auto-detects Next.js configuration
-   - Deploy with zero configuration
-
-3. **Custom Domain**
-   - Add your domain in Vercel dashboard
-   - Configure DNS records
-   - SSL certificate auto-generated
-
-## 📧 Contact
-
-**Carlos Yépez** - Dance Instructor
-
-- 📱 WhatsApp: [+34 698 50 16 76](https://wa.me/34698501676)
-- 📸 Instagram: [@bachataalairelibre](https://instagram.com/bachataalairelibre)
-- 👥 Meetup: [Baila Salsa y Bachata](https://www.meetup.com/es-ES/baila-salsa-y-bachata/)
-- 📧 Email: bachataalairelibremalaga@gmail.com
-- 🌐 Website: [bachataalairelibre.com](https://www.bachataalairelibre.com/)
-
-## 📄 License
-
-This project is private and proprietary. All rights reserved.
-
-## 🙏 Acknowledgments
-
-Built with amazing open-source tools:
-
-- [Next.js](https://nextjs.org/) - The React Framework for Production
-- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) - Animation library
-- [Lucide](https://lucide.dev/) - Beautiful & consistent icons
-- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+## Interactive Components
+
+The page includes several client-side components that go beyond static content display.
+
+- **`MusicPlayer.tsx`** — custom audio player for bachata tracks from `public/sounds/`
+- **`PhotoSlider.tsx`** — Embla Carousel-based image slider with animated transitions
+- **`Testimonials.tsx`** — auto-advancing carousel with manual navigation controls
+- **`whatsapp-widget.tsx`** — floating button with pre-filled message to the instructor's number
+- **`LanguageSelector.tsx`** — language switcher that updates the global `LanguageProvider` context
+
+## SEO and Performance
+
+The project targets and maintains near-perfect Lighthouse scores through a combination of Next.js image optimization, structured data, and static generation.
+
+| Metric | Score |
+|---|---|
+| **Performance** | 99 |
+| **Accessibility** | 100 |
+| **Best Practices** | 96 |
+| **SEO** | 100 |
+
+SEO features are implemented in `app/layout.tsx` (JSON-LD Schema.org `LocalBusiness`, OpenGraph, Twitter Cards, geo-location meta tags), `app/sitemap.ts` (dynamic XML sitemap), and `app/robots.ts`. Security headers (HSTS, CSP, `X-Frame-Options`) and one-year static asset cache TTLs are declared in `vercel.json`.
+
+## System Architecture
+
+| Component | Role |
+|---|---|
+| **App Router (`app/`)** | Page routing, metadata generation, and SSR/SSG boundaries |
+| **`LanguageProvider.tsx`** | React context holding all UI translations for four languages |
+| **`lib/blog.ts`** | Blog data layer: markdown parsing, tag filtering, related post scoring |
+| **shadcn/ui + Radix UI** | Accessible component primitives (accordion, dialog, carousel, etc.) |
+| **Vercel Edge Network** | CDN delivery, security headers, and asset caching |
+| **Vercel Analytics** | Page view and performance telemetry, injected in root layout |
+
+## Technology Stack
+
+- **Frontend**: Next.js 15 (App Router), React 19, TypeScript 5
+- **Styling**: Tailwind CSS 4, `tailwindcss-animate`, Class Variance Authority
+- **UI Components**: shadcn/ui, Radix UI (20+ primitives), Embla Carousel 8
+- **Animations**: Framer Motion 12
+- **Icons**: Lucide React 0.454
+- **Forms**: React Hook Form 7, Zod 3, `@hookform/resolvers`
+- **Content / Blog**: Gray Matter 4, Remark 15, Remark HTML 16, Rehype Sanitize 6, Reading Time 1.5
+- **Deployment**: Vercel
+- **Analytics**: Vercel Analytics, Metricool
+
+## Key Features
+
+1. **Four-language blog** — 40 markdown posts (10 each in es, en, de, fr) with tag filtering and reading time estimates
+2. **Lighthouse 99/100/96/100** — achieved through WebP/AVIF image formats, edge caching, and minimal client-side JavaScript
+3. **Pricing cards with video backgrounds** — each tier features an embedded `<video>` element served from `public/videos/`
+4. **Schema.org LocalBusiness markup** — JSON-LD structured data in the root layout for Google rich results
+5. **WhatsApp community integration** — QR code component with live member count and floating contact widget
+6. **Client-side i18n via React context** — all UI strings managed in `LanguageProvider.tsx` without an external i18n library
+7. **PWA-ready** — `manifest.ts` and service worker support configured in the App Router
+
+## Testing Strategy
+
+There is no automated test suite. Quality is validated through Lighthouse CI audits run manually against the production Vercel deployment after each release, with the audit screenshot archived in `assets/`. ESLint enforces static code correctness on every build via `npm run lint`. Interactive flows (language switching, music player, WhatsApp widget) are verified manually in the browser across mobile and desktop breakpoints.
+
+## Localization
+
+The project supports **Spanish** (default), **English**, **German**, and **French**. UI translations are managed in `components/LanguageProvider.tsx` as a typed `Translations` object keyed by `Language = "es" | "en" | "de" | "fr"`. Blog content is separated into language-specific directories under `content/blog/{es,en,de,fr}/`. Legal pages (`aviso-legal`, `privacidad`, `cookies`) are available in Spanish only, as noted in the footer translation keys.
+
+## Project Setup
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. No environment variables are required. All configuration (contact number, location coordinates, tracking hash) is hardcoded in source files.
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Visit `http://localhost:3000`
 
 ---
 
-<div align="center">
-  <strong>Made with ❤️ in Málaga, Spain</strong>
-  <br />
-  <sub>Teaching bachata and salsa through outdoor classes</sub>
-</div>
+Built for the bachata and salsa community in Málaga.
