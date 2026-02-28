@@ -1,17 +1,13 @@
 # Bachata al Aire Libre
 
-<div align="center">
-    <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
-    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer" alt="Framer Motion" />
-    <img src="https://img.shields.io/badge/shadcn%2Fui-latest-000000?style=for-the-badge" alt="shadcn/ui" />
-    <img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel" alt="Vercel" />
-</div>
+<img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
+<img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
+<img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer" alt="Framer Motion" />
+<img src="https://img.shields.io/badge/shadcn%2Fui-latest-000000?style=for-the-badge" alt="shadcn/ui" />
+<img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel" alt="Vercel" />
 
-<p align="center">
-    <i>Landing page for outdoor bachata and salsa classes in Málaga, with multilingual content, interactive media components, and a markdown blog in four languages.</i>
-</p>
+*Landing page for outdoor bachata and salsa classes in Málaga, with multilingual content, interactive media components, and a markdown blog in four languages.*
 
 ## Page Sections
 
