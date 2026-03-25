@@ -175,6 +175,36 @@ export function Tableau() {
       alt: "Bachata Málaga 26",
       rotation: 3,
     },
+    {
+      id: "27",
+      src: "/images/tableau/bachatamalaga27.png",
+      alt: "Bachata Málaga 27",
+      rotation: -1,
+    },
+    {
+      id: "28",
+      src: "/images/tableau/bachatamalaga28.png",
+      alt: "Bachata Málaga 28",
+      rotation: 2,
+    },
+    {
+      id: "29",
+      src: "/images/tableau/bachatamalaga29.png",
+      alt: "Bachata Málaga 29",
+      rotation: -3,
+    },
+    {
+      id: "30",
+      src: "/images/tableau/bachatamalaga30.png",
+      alt: "Bachata Málaga 30",
+      rotation: 1,
+    },
+    {
+      id: "31",
+      src: "/images/tableau/bachatamalaga31.png",
+      alt: "Bachata Málaga 31",
+      rotation: -2,
+    },
   ];
 
   return (
