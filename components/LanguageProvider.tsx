@@ -73,6 +73,17 @@ interface Translations {
     questions: {
       question: string;
       answer: string;
+      answer2?: string;
+    }[];
+  };
+  testimonials: {
+    title: string;
+    subtitle: string;
+    viewAll: string;
+    items: {
+      name: string;
+      date: string;
+      tags: string[];
     }[];
   };
   footer: {
@@ -162,10 +173,10 @@ const translations: Record<Language, Translations> = {
         "Join our community and discover all the benefits of outdoor dancing!",
     },
     pricing: {
-      title: "Precios",
-      subtitle: "Elige la opción perfecta para ti",
-      individual: "Taller-Clase Grupal",
-      private: "Clase Privada",
+      title: "Pricing",
+      subtitle: "Choose the perfect option for you",
+      individual: "Group Workshop-Class",
+      private: "Private Class",
       privateDesc: "Personalized session",
       perPerson: "per person",
       perSession: "",
@@ -232,6 +243,53 @@ const translations: Record<Language, Translations> = {
           question: "How can I book my bachata class in Málaga?",
           answer:
             "You can book via WhatsApp at +34 698 50 16 76, send us an email at bachataalairelibremalaga@gmail.com, or contact us through Instagram @bachataalairelibre. We'll respond quickly to confirm your spot!",
+        },
+      ],
+    },
+    testimonials: {
+      title: "What our students say",
+      subtitle: "Real reviews from Meetup ⭐⭐⭐⭐⭐",
+      viewAll: "View all reviews on Meetup",
+      items: [
+        {
+          name: "Jan Chorushij",
+          date: "1 month ago",
+          tags: ["As described", "Interesting", "Memorable", "Inclusive attendees", "Meet new people", "Optimal environment", "Feeling of safety", "Welcoming organizer"],
+        },
+        {
+          name: "Dani",
+          date: "1 month ago",
+          tags: ["As described", "Interesting", "Memorable", "Inclusive attendees", "Meet new people", "Optimal environment", "Punctual start", "Feeling of safety", "Welcoming organizer"],
+        },
+        {
+          name: "Deniz Gençtürk",
+          date: "3 months ago",
+          tags: ["As described", "Interesting", "Memorable", "Inclusive attendees", "Meet new people", "Optimal environment", "Punctual start", "Feeling of safety", "Welcoming organizer"],
+        },
+        {
+          name: "Lakshi",
+          date: "5 months ago",
+          tags: ["As described", "Interesting", "Memorable", "Inclusive attendees", "Meet new people", "Optimal environment", "Punctual start", "Feeling of safety", "Welcoming organizer"],
+        },
+        {
+          name: "Barbara",
+          date: "6 months ago",
+          tags: ["As described", "Interesting", "Memorable", "Inclusive attendees", "Meet new people", "Optimal environment", "Punctual start", "Feeling of safety", "Welcoming organizer"],
+        },
+        {
+          name: "Dominik Bernhard",
+          date: "1 month ago",
+          tags: ["Inclusive attendees", "Meet new people", "Welcoming organizer"],
+        },
+        {
+          name: "Svitlana Ya",
+          date: "1 month ago",
+          tags: ["As described", "Interesting", "Meet new people", "Welcoming organizer"],
+        },
+        {
+          name: "Cristina",
+          date: "3 months ago",
+          tags: ["Meet new people"],
         },
       ],
     },
@@ -395,6 +453,53 @@ const translations: Record<Language, Translations> = {
         },
       ],
     },
+    testimonials: {
+      title: "Was unsere Schüler sagen",
+      subtitle: "Echte Bewertungen von Meetup ⭐⭐⭐⭐⭐",
+      viewAll: "Alle Bewertungen auf Meetup ansehen",
+      items: [
+        {
+          name: "Jan Chorushij",
+          date: "vor 1 Monat",
+          tags: ["Wie beschrieben", "Interessant", "Unvergesslich", "Inklusive Teilnehmer", "Neue Leute kennenlernen", "Optimale Umgebung", "Sicherheitsgefühl", "Herzlicher Organisator"],
+        },
+        {
+          name: "Dani",
+          date: "vor 1 Monat",
+          tags: ["Wie beschrieben", "Interessant", "Unvergesslich", "Inklusive Teilnehmer", "Neue Leute kennenlernen", "Optimale Umgebung", "Pünktlicher Beginn", "Sicherheitsgefühl", "Herzlicher Organisator"],
+        },
+        {
+          name: "Deniz Gençtürk",
+          date: "vor 3 Monaten",
+          tags: ["Wie beschrieben", "Interessant", "Unvergesslich", "Inklusive Teilnehmer", "Neue Leute kennenlernen", "Optimale Umgebung", "Pünktlicher Beginn", "Sicherheitsgefühl", "Herzlicher Organisator"],
+        },
+        {
+          name: "Lakshi",
+          date: "vor 5 Monaten",
+          tags: ["Wie beschrieben", "Interessant", "Unvergesslich", "Inklusive Teilnehmer", "Neue Leute kennenlernen", "Optimale Umgebung", "Pünktlicher Beginn", "Sicherheitsgefühl", "Herzlicher Organisator"],
+        },
+        {
+          name: "Barbara",
+          date: "vor 6 Monaten",
+          tags: ["Wie beschrieben", "Interessant", "Unvergesslich", "Inklusive Teilnehmer", "Neue Leute kennenlernen", "Optimale Umgebung", "Pünktlicher Beginn", "Sicherheitsgefühl", "Herzlicher Organisator"],
+        },
+        {
+          name: "Dominik Bernhard",
+          date: "vor 1 Monat",
+          tags: ["Inklusive Teilnehmer", "Neue Leute kennenlernen", "Herzlicher Organisator"],
+        },
+        {
+          name: "Svitlana Ya",
+          date: "vor 1 Monat",
+          tags: ["Wie beschrieben", "Interessant", "Neue Leute kennenlernen", "Herzlicher Organisator"],
+        },
+        {
+          name: "Cristina",
+          date: "vor 3 Monaten",
+          tags: ["Neue Leute kennenlernen"],
+        },
+      ],
+    },
     footer: {
       title: "Bachata im Freien in Málaga",
       description: "Salsa- und Bachata-Kurse mit Carlos Yépez",
@@ -555,6 +660,53 @@ const translations: Record<Language, Translations> = {
         },
       ],
     },
+    testimonials: {
+      title: "Ce que disent nos élèves",
+      subtitle: "Avis réels de Meetup ⭐⭐⭐⭐⭐",
+      viewAll: "Voir tous les avis sur Meetup",
+      items: [
+        {
+          name: "Jan Chorushij",
+          date: "il y a 1 mois",
+          tags: ["Comme décrit", "Intéressant", "Mémorable", "Participants inclusifs", "Rencontrer de nouvelles personnes", "Environnement optimal", "Sentiment de sécurité", "Organisateur accueillant"],
+        },
+        {
+          name: "Dani",
+          date: "il y a 1 mois",
+          tags: ["Comme décrit", "Intéressant", "Mémorable", "Participants inclusifs", "Rencontrer de nouvelles personnes", "Environnement optimal", "Début ponctuel", "Sentiment de sécurité", "Organisateur accueillant"],
+        },
+        {
+          name: "Deniz Gençtürk",
+          date: "il y a 3 mois",
+          tags: ["Comme décrit", "Intéressant", "Mémorable", "Participants inclusifs", "Rencontrer de nouvelles personnes", "Environnement optimal", "Début ponctuel", "Sentiment de sécurité", "Organisateur accueillant"],
+        },
+        {
+          name: "Lakshi",
+          date: "il y a 5 mois",
+          tags: ["Comme décrit", "Intéressant", "Mémorable", "Participants inclusifs", "Rencontrer de nouvelles personnes", "Environnement optimal", "Début ponctuel", "Sentiment de sécurité", "Organisateur accueillant"],
+        },
+        {
+          name: "Barbara",
+          date: "il y a 6 mois",
+          tags: ["Comme décrit", "Intéressant", "Mémorable", "Participants inclusifs", "Rencontrer de nouvelles personnes", "Environnement optimal", "Début ponctuel", "Sentiment de sécurité", "Organisateur accueillant"],
+        },
+        {
+          name: "Dominik Bernhard",
+          date: "il y a 1 mois",
+          tags: ["Participants inclusifs", "Rencontrer de nouvelles personnes", "Organisateur accueillant"],
+        },
+        {
+          name: "Svitlana Ya",
+          date: "il y a 1 mois",
+          tags: ["Comme décrit", "Intéressant", "Rencontrer de nouvelles personnes", "Organisateur accueillant"],
+        },
+        {
+          name: "Cristina",
+          date: "il y a 3 mois",
+          tags: ["Rencontrer de nouvelles personnes"],
+        },
+      ],
+    },
     footer: {
       title: "Bachata en Plein Air à Málaga",
       description: "Cours de salsa et bachata avec Carlos Yépez",
@@ -712,6 +864,53 @@ const translations: Record<Language, Translations> = {
           question: "¿Cómo puedo reservar mi clase de bachata en Málaga?",
           answer:
             "Es muy fácil: contacta con nosotros por WhatsApp al +34 698 50 16 76 o envía un email a bachataalairelibremalaga@gmail.com. También puedes seguirnos en Instagram @bachataalairelibre para estar al tanto de clases especiales y eventos.",
+        },
+      ],
+    },
+    testimonials: {
+      title: "Lo que dicen nuestros alumnos",
+      subtitle: "Reseñas reales de Meetup ⭐⭐⭐⭐⭐",
+      viewAll: "Ver todas las reseñas en Meetup",
+      items: [
+        {
+          name: "Jan Chorushij",
+          date: "hace 1 mes",
+          tags: ["Según lo descrito", "Interesante", "Dejó huella", "Asistentes inclusivos", "Contacto con personas nuevas", "Entorno óptimo", "Sensación de seguridad", "Organizador acogedor"],
+        },
+        {
+          name: "Dani",
+          date: "hace 1 mes",
+          tags: ["Según lo descrito", "Interesante", "Dejó huella", "Asistentes inclusivos", "Contacto con personas nuevas", "Entorno óptimo", "Comienzo puntual", "Sensación de seguridad", "Organizador acogedor"],
+        },
+        {
+          name: "Deniz Gençtürk",
+          date: "hace 3 meses",
+          tags: ["Según lo descrito", "Interesante", "Dejó huella", "Asistentes inclusivos", "Contacto con personas nuevas", "Entorno óptimo", "Comienzo puntual", "Sensación de seguridad", "Organizador acogedor"],
+        },
+        {
+          name: "Lakshi",
+          date: "hace 5 meses",
+          tags: ["Según lo descrito", "Interesante", "Dejó huella", "Asistentes inclusivos", "Contacto con personas nuevas", "Entorno óptimo", "Comienzo puntual", "Sensación de seguridad", "Organizador acogedor"],
+        },
+        {
+          name: "Barbara",
+          date: "hace 6 meses",
+          tags: ["Según lo descrito", "Interesante", "Dejó huella", "Asistentes inclusivos", "Contacto con personas nuevas", "Entorno óptimo", "Comienzo puntual", "Sensación de seguridad", "Organizador acogedor"],
+        },
+        {
+          name: "Dominik Bernhard",
+          date: "hace 1 mes",
+          tags: ["Asistentes inclusivos", "Contacto con personas nuevas", "Organizador acogedor"],
+        },
+        {
+          name: "Svitlana Ya",
+          date: "hace 1 mes",
+          tags: ["Según lo descrito", "Interesante", "Contacto con personas nuevas", "Organizador acogedor"],
+        },
+        {
+          name: "Cristina",
+          date: "hace 3 meses",
+          tags: ["Contacto con personas nuevas"],
         },
       ],
     },

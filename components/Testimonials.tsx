@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "./LanguageProvider";
 import { Star } from "lucide-react";
 import {
   Carousel,
@@ -10,117 +11,19 @@ import {
 } from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
 
-const testimonials = [
-  {
-    name: "Jan Chorushij",
-    date: "hace 1 mes",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Dejó huella",
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Entorno óptimo",
-      "Sensación de seguridad",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Dani",
-    date: "hace 1 mes",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Dejó huella",
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Entorno óptimo",
-      "Comienzo puntual",
-      "Sensación de seguridad",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Deniz Gençtürk",
-    date: "hace 3 meses",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Dejó huella",
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Entorno óptimo",
-      "Comienzo puntual",
-      "Sensación de seguridad",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Lakshi",
-    date: "hace 5 meses",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Dejó huella",
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Entorno óptimo",
-      "Comienzo puntual",
-      "Sensación de seguridad",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Barbara",
-    date: "hace 6 meses",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Dejó huella",
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Entorno óptimo",
-      "Comienzo puntual",
-      "Sensación de seguridad",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Dominik Bernhard",
-    date: "hace 1 mes",
-    tags: [
-      "Asistentes inclusivos",
-      "Contacto con personas nuevas",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Svitlana Ya",
-    date: "hace 1 mes",
-    tags: [
-      "Según lo descrito",
-      "Interesante",
-      "Contacto con personas nuevas",
-      "Organizador acogedor",
-    ],
-  },
-  {
-    name: "Cristina",
-    date: "hace 3 meses",
-    tags: ["Contacto con personas nuevas"],
-  },
-];
 
 export function Testimonials() {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-muted/50 py-20 px-4">
       <div className="container mx-auto">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-balance font-bold text-foreground text-4xl md:text-5xl">
-            Lo que dicen nuestros alumnos
+            {t.testimonials.title}
           </h2>
           <p className="text-balance text-muted-foreground text-xl">
-            Reseñas reales de Meetup ⭐⭐⭐⭐⭐
+            {t.testimonials.subtitle}
           </p>
         </div>
 
@@ -133,7 +36,7 @@ export function Testimonials() {
             className="w-full"
           >
             <CarouselContent>
-              {testimonials.map((testimonial, index) => (
+              {t.testimonials.items.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <Card className="h-full border-2 hover:shadow-lg transition-shadow">
                     <CardContent className="p-6 flex flex-col h-full">
@@ -188,7 +91,7 @@ export function Testimonials() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
           >
-            Ver todas las reseñas en Meetup
+            {t.testimonials.viewAll}
             <svg
               className="h-4 w-4"
               fill="none"
