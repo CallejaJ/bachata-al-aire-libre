@@ -87,7 +87,7 @@ export function Pricing() {
           </Card>
 
           {/* ---------- Clase Privada ---------- */}
-          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]">
+          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_8px_30px_rgba(0,0,0,0.2)] ring-2 ring-[oklch(0.62_0.16_320)]/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]">
             {/* Fondo: degradado noche elegante (índigo -> violeta -> magenta) */}
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.28_0.12_268)] via-[oklch(0.34_0.15_298)] to-[oklch(0.42_0.14_330)]" />
             <div className="absolute inset-0 z-0 bg-black/10" />
