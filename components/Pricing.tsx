@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 
 export function Pricing() {
   const { t } = useLanguage();
@@ -28,18 +28,12 @@ export function Pricing() {
 
         <div className="mx-auto grid max-w-5xl items-stretch gap-8 md:grid-cols-2">
           {/* ---------- Taller-Clase Grupal (destacada) ---------- */}
-          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_12px_40px_-8px_rgba(0,0,0,0.35)] ring-2 ring-secondary/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-10px_oklch(0.65_0.18_60/0.55)] md:scale-[1.03]">
+          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_12px_40px_-8px_rgba(0,0,0,0.35)] ring-2 ring-secondary/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-10px_oklch(0.65_0.18_60/0.55)]">
             {/* Fondo: degradado atardecer de marca */}
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.34_0.13_255)] via-[oklch(0.46_0.18_35)] to-[oklch(0.58_0.18_55)]" />
             <div className="absolute inset-0 z-0 bg-black/15" />
 
-            {/* Cinta "Más popular" */}
-            <div className="absolute left-0 right-0 top-0 z-20 flex items-center justify-center gap-1.5 bg-secondary py-1.5 text-sm font-bold text-secondary-foreground shadow-md">
-              <Star className="h-4 w-4 fill-current" />
-              Más popular
-            </div>
-
-            <CardHeader className="relative z-10 pt-12 text-center">
+            <CardHeader className="relative z-10 pt-8 text-center">
               <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.individual}
               </CardTitle>
@@ -94,11 +88,11 @@ export function Pricing() {
 
           {/* ---------- Clase Privada ---------- */}
           <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]">
-            {/* Fondo: degradado azul profundo de marca */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.3_0.11_252)] via-[oklch(0.36_0.13_250)] to-[oklch(0.42_0.14_255)]" />
-            <div className="absolute inset-0 z-0 bg-black/15" />
+            {/* Fondo: degradado noche elegante (índigo -> violeta -> magenta) */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.28_0.12_268)] via-[oklch(0.34_0.15_298)] to-[oklch(0.42_0.14_330)]" />
+            <div className="absolute inset-0 z-0 bg-black/10" />
 
-            <CardHeader className="relative z-10 pt-12 text-center">
+            <CardHeader className="relative z-10 pt-8 text-center">
               <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.private}
               </CardTitle>
