@@ -3,9 +3,26 @@
 import { useLanguage } from "./LanguageProvider";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+// Imágenes de portada (en /public). Desktop = horizontales, móvil = verticales.
+const HERO_DESKTOP = ["/hero.webp", "/hero2.webp", "/hero3.webp"];
+const HERO_MOBILE = ["/hero-v1.webp", "/hero-v2.webp", "/hero-v3.webp"];
 
 export function Hero() {
   const { t } = useLanguage();
+
+  // Empieza con la primera (evita desajuste de hidratación) y elige
+  // una aleatoria al montar en el cliente. Se usa el mismo índice para
+  // que la escena de desktop y móvil sea coherente.
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setIndex(Math.floor(Math.random() * HERO_DESKTOP.length));
+  }, []);
+
+  const desktopSrc = HERO_DESKTOP[index];
+  const mobileSrc = HERO_MOBILE[index];
 
   const scrollToPricing = () => {
     const pricingSection = document.getElementById("pricing");
@@ -18,13 +35,26 @@ export function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image - OPTIMIZADO */}
       <div className="absolute inset-0 z-0">
+        {/* Móvil: imagen vertical */}
         <Image
-          src="/hero.webp"
+          key={mobileSrc}
+          src={mobileSrc}
           alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
           fill
           priority
           quality={85}
-          className="object-cover"
+          className="object-cover md:hidden"
+          sizes="100vw"
+        />
+        {/* Desktop: imagen horizontal */}
+        <Image
+          key={desktopSrc}
+          src={desktopSrc}
+          alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
+          fill
+          priority
+          quality={85}
+          className="hidden object-cover md:block"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-blue-800/40 to-blue-950/70" />
