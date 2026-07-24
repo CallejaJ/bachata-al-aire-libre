@@ -4,13 +4,12 @@ import { useLanguage } from "./LanguageProvider";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 export function Pricing() {
   const { t } = useLanguage();
@@ -27,55 +26,57 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-          {/* Group Class Pricing */}
-          <Card className="border-2 border-secondary shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 relative overflow-hidden flex flex-col">
-            {/* Video Background */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover z-0"
-            >
-              <source src="/videos/individual.mp4" type="video/mp4" />
-            </video>
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/40 z-0"></div>
+        <div className="mx-auto grid max-w-5xl items-stretch gap-8 md:grid-cols-2">
+          {/* ---------- Taller-Clase Grupal (destacada) ---------- */}
+          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_12px_40px_-8px_rgba(0,0,0,0.35)] ring-2 ring-secondary/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-10px_oklch(0.65_0.18_60/0.55)] md:scale-[1.03]">
+            {/* Fondo: degradado atardecer de marca */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.34_0.13_255)] via-[oklch(0.46_0.18_35)] to-[oklch(0.58_0.18_55)]" />
+            <div className="absolute inset-0 z-0 bg-black/15" />
 
-            {/* Content */}
-            <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-bold shadow-md z-10">
-              ¡PROMO!
+            {/* Cinta "Más popular" */}
+            <div className="absolute left-0 right-0 top-0 z-20 flex items-center justify-center gap-1.5 bg-secondary py-1.5 text-sm font-bold text-secondary-foreground shadow-md">
+              <Star className="h-4 w-4 fill-current" />
+              Más popular
             </div>
-            <CardHeader className="text-center relative z-10">
+
+            <CardHeader className="relative z-10 pt-12 text-center">
               <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.individual}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow relative z-10">
-              <div className="mb-6 text-center">
-                <span className="text-5xl font-bold text-white drop-shadow-lg">
+
+            <CardContent className="relative z-10 flex-grow">
+              <div className="mb-1 text-center">
+                <span className="text-6xl font-extrabold text-white drop-shadow-lg">
                   €10
                 </span>
               </div>
-              <div className="mb-4 text-center bg-white/90 backdrop-blur-sm rounded-lg py-2 px-3">
-                <span className="text-foreground font-semibold">
+              <p className="mb-6 text-center text-sm font-medium text-white/85 drop-shadow">
+                ≈ 5€ por persona con tu pareja
+              </p>
+
+              <div className="mb-5 rounded-lg bg-white/95 py-2.5 px-3 text-center shadow-sm backdrop-blur-sm">
+                <span className="font-semibold text-foreground">
                   + {t.pricing.freePartner}
                 </span>
               </div>
+
               <ul className="space-y-3">
                 {t.pricing.features.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-white drop-shadow-md" />
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-secondary/90 shadow">
+                      <Check className="h-4 w-4 text-secondary-foreground" />
+                    </span>
                     <span className="text-white drop-shadow-md">{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
-            <CardFooter className="relative z-10">
+
+            <CardFooter className="relative z-10 flex-col gap-2">
               <Button
                 asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
+                className="w-full bg-secondary py-6 text-lg font-bold text-secondary-foreground shadow-md transition hover:scale-[1.02] hover:bg-secondary/90 hover:shadow-lg"
               >
                 <a
                   href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20el%20taller-clase%20grupal%20de%20bachata"
@@ -85,58 +86,57 @@ export function Pricing() {
                   {t.pricing.cta}
                 </a>
               </Button>
+              <p className="text-center text-xs text-white/75">
+                Sin compromiso · Reserva por WhatsApp
+              </p>
             </CardFooter>
           </Card>
 
-          {/* Private Pricing */}
-          <Card className="border-2 shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 relative overflow-hidden flex flex-col">
-            {/* Video Background */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover z-0"
-            >
-              <source src="/videos/private.mp4" type="video/mp4" />
-            </video>
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/40 z-0"></div>
+          {/* ---------- Clase Privada ---------- */}
+          <Card className="relative flex flex-col overflow-hidden rounded-2xl border-0 text-white shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.28)]">
+            {/* Fondo: degradado azul profundo de marca */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[oklch(0.3_0.11_252)] via-[oklch(0.36_0.13_250)] to-[oklch(0.42_0.14_255)]" />
+            <div className="absolute inset-0 z-0 bg-black/15" />
 
-            {/* Content */}
-            <CardHeader className="text-center relative z-10">
+            <CardHeader className="relative z-10 pt-12 text-center">
               <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.private}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow relative z-10">
+
+            <CardContent className="relative z-10 flex-grow">
               <div className="mb-6 text-center">
-                <span className="text-5xl font-bold text-white drop-shadow-lg">
+                <span className="text-6xl font-extrabold text-white drop-shadow-lg">
                   €25
                 </span>
-                <span className="text-white text-xl drop-shadow-md">
+                <span className="text-xl text-white/85 drop-shadow-md">
                   {" "}
                   {t.pricing.perHour}
                 </span>
               </div>
-              <div className="mb-4 text-center bg-white/90 backdrop-blur-sm rounded-lg py-2 px-3">
-                <span className="text-foreground font-semibold">
+
+              <div className="mb-5 rounded-lg bg-white/95 py-2.5 px-3 text-center shadow-sm backdrop-blur-sm">
+                <span className="font-semibold text-foreground">
                   {t.pricing.privatePromo}
                 </span>
               </div>
+
               <ul className="space-y-3">
                 {t.pricing.privateFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-white drop-shadow-md" />
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white/20 shadow">
+                      <Check className="h-4 w-4 text-white" />
+                    </span>
                     <span className="text-white drop-shadow-md">{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
-            <CardFooter className="relative z-10">
+
+            <CardFooter className="relative z-10 flex-col gap-2">
               <Button
                 asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
+                className="w-full bg-primary py-6 text-lg font-semibold text-primary-foreground shadow-md transition hover:scale-[1.02] hover:bg-primary/90 hover:shadow-lg"
               >
                 <a
                   href="https://wa.me/34698501676?text=Hola%20Carlos%2C%20me%20interesa%20la%20clase%20privada%20de%20bachata"
@@ -146,6 +146,9 @@ export function Pricing() {
                   {t.pricing.cta}
                 </a>
               </Button>
+              <p className="text-center text-xs text-white/75">
+                Sin compromiso · Reserva por WhatsApp
+              </p>
             </CardFooter>
           </Card>
         </div>
