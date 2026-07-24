@@ -12,17 +12,18 @@ const HERO_MOBILE = ["/hero-v1.webp", "/hero-v2.webp", "/hero-v3.webp"];
 export function Hero() {
   const { t } = useLanguage();
 
-  // Empieza con la primera (evita desajuste de hidratación) y elige
-  // una aleatoria al montar en el cliente. Se usa el mismo índice para
-  // que la escena de desktop y móvil sea coherente.
-  const [index, setIndex] = useState(0);
+  // Elegimos la imagen aleatoria SOLO en el cliente, antes de renderizar
+  // ninguna imagen. Así evitamos el doble cargado (imagen 0 -> aleatoria)
+  // y el desajuste de hidratación. Mientras tanto se ve el fondo azul.
+  const [index, setIndex] = useState<number | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setIndex(Math.floor(Math.random() * HERO_DESKTOP.length));
   }, []);
 
-  const desktopSrc = HERO_DESKTOP[index];
-  const mobileSrc = HERO_MOBILE[index];
+  const desktopSrc = index !== null ? HERO_DESKTOP[index] : null;
+  const mobileSrc = index !== null ? HERO_MOBILE[index] : null;
 
   const scrollToPricing = () => {
     const pricingSection = document.getElementById("pricing");
@@ -34,29 +35,38 @@ export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image - OPTIMIZADO */}
-      <div className="absolute inset-0 z-0">
-        {/* Móvil: imagen vertical */}
-        <Image
-          key={mobileSrc}
-          src={mobileSrc}
-          alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
-          fill
-          priority
-          quality={85}
-          className="object-cover md:hidden"
-          sizes="100vw"
-        />
-        {/* Desktop: imagen horizontal */}
-        <Image
-          key={desktopSrc}
-          src={desktopSrc}
-          alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
-          fill
-          priority
-          quality={85}
-          className="hidden object-cover md:block"
-          sizes="100vw"
-        />
+      {/* Fondo azul base (del propio diseño) para que nunca se vea gris */}
+      <div className="absolute inset-0 z-0 bg-blue-950">
+        {mobileSrc && (
+          /* Móvil: imagen vertical */
+          <Image
+            src={mobileSrc}
+            alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
+            fill
+            priority
+            quality={85}
+            onLoad={() => setLoaded(true)}
+            className={`object-cover transition-opacity duration-700 md:hidden ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="100vw"
+          />
+        )}
+        {desktopSrc && (
+          /* Desktop: imagen horizontal */
+          <Image
+            src={desktopSrc}
+            alt="Clases de bachata al aire libre en Málaga con Carlos Yépez"
+            fill
+            priority
+            quality={85}
+            onLoad={() => setLoaded(true)}
+            className={`hidden object-cover transition-opacity duration-700 md:block ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+            sizes="100vw"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-blue-800/40 to-blue-950/70" />
       </div>
 
